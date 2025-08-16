@@ -87,23 +87,6 @@ pip install scikit-learn xgboost pandas numpy
 
 **Entorno de pruebas: VirtualBox + Cuckoo Sandbox**
 
-## 🚀 Instalación y Ejecución
-**1️⃣ Clonar el repositorio**
-```
-git clone https://github.com/usuario/proyecto-keylogger-detection.git
-cd proyecto-keylogger-detection
-```
-**2️⃣ Compilar el módulo en C++**
-```
-g++ -std=c++17 -o detector detector.cpp
-```
-**3️⃣ Ejecutar el sistema**
-```
-./detector
-```
-
-- El sistema se comunicará con el modelo en Python para clasificar procesos en tiempo real.
-
 ## 📊 Métricas de Evaluación
 
 - Precisión (Accuracy)
