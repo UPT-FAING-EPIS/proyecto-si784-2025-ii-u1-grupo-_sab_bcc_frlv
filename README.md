@@ -15,11 +15,8 @@ El **Sistema de Gestión de Asistencias** es una aplicación móvil multiplatafo
 ## 📝 Tabla de Contenidos
 1. [Problema](#-problema)
 2. [Objetivos](#-objetivos)
-3. [Tecnologías](#-tecnologías)
-4. [Instalación](#-instalación)
-5. [Uso](#-uso)
-6. [Autores](#-autores)
-7. [Licencia](#-licencia)
+3. [Autores](#-autores)
+4. [Licencia](#-licencia)
 
 ---
 
