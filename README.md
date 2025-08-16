@@ -5,6 +5,13 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-En%20desarrollo-yellow)
 
+| Integrante                         | Código     |
+| ---------------------------------- | ---------- |
+| Sebastián Arce Bracamonte          | 2019062986 |
+| Brant Antony Chata Choque          | 2021072615 |
+| Renzo Fernando Loyola Vilca Choque | 2020067577 |
+
+
 ---
 
 ## 📖 Descripción
@@ -15,9 +22,6 @@ El **Sistema de Gestión de Asistencias** es una aplicación móvil multiplatafo
 ## 📝 Tabla de Contenidos
 1. [Problema](#-problema)
 2. [Objetivos](#-objetivos)
-3. [Autores](#-autores)
-4. [Licencia](#-licencia)
-
 ---
 
 ## 🚨 Problema
@@ -44,29 +48,3 @@ Actualmente, muchas instituciones necesitan un sistema eficiente para el registr
 | **Experiencia de Usuario** | - Interfaz siguiendo Material Design 3.<br>- Diseño responsivo.<br>- Retroalimentación visual y auditiva. |
 
 ---
-
-## 🛠 Tecnologías
-
-| Tecnología | Descripción |
-|------------|-------------|
-| **Flutter** | Framework para desarrollo multiplataforma. |
-| **Firebase Authentication** | Gestión de usuarios y roles. |
-| **Firebase Firestore** | Base de datos en tiempo real. |
-| **Material Design 3** | Guías de diseño modernas. |
-
----
-
-## 📦 Instalación
-
-```bash
-# Clonar el repositorio
-git clone https://github.com/usuario/sistema-asistencias.git
-
-# Entrar al directorio
-cd sistema-asistencias
-
-# Instalar dependencias
-flutter pub get
-
-# Ejecutar el proyecto
-flutter run
