@@ -1,121 +1,173 @@
+# Sistema de Control de Acceso - ACEES Group
 
-| Integrante                         | Código     |
-| ---------------------------------- | ---------- |
-| Sebastián Arce Bracamonte          | 2019062986 |
-| Brant Antony Chata Choque          | 2021072615 |
-| Renzo Fernando Loyola Vilca Choque | 2020067577 |
-# 🛡️ Sistema Híbrido en C++ y Python para Detección y Supresión Automática de Keyloggers en Windows
+Una aplicación móvil desarrollada en Flutter para el control de acceso y gestión de estudiantes en instituciones educativas. El sistema integra autenticación Firebase, escaneo de códigos QR/códigos de barras, y un completo sistema de reportes administrativos.
 
-## 📌 Descripción del Proyecto
-Este proyecto tiene como finalidad el desarrollo de un **sistema híbrido** en **C++ y Python**, apoyado en algoritmos de **Machine Learning**, para la **detección y supresión automática de keyloggers** en entornos **Windows**.  
+## 👥 Integrantes del Proyecto
 
-Los **keyloggers** representan una amenaza crítica de ciberseguridad, pues capturan información sensible (contraseñas, datos bancarios, credenciales corporativas) de manera oculta y difícil de detectar, incluso para antivirus tradicionales.  
+| Nombre | Código de Estudiante |
+|--------|---------------------|
+| Sebastián Arce Bracamonte | 2019062986 |
+| Brant Antony Chata Choque | 2021072615 |
 
-El sistema propuesto se enfoca en el **análisis de procesos, tráfico de red, registros de teclado y comportamiento de archivos**, diferenciando entre procesos legítimos y sospechosos. Además, integra un mecanismo de **respuesta automática** para finalizar procesos maliciosos y poner en cuarentena los archivos infectados.
+## 📋 Descripción del Proyecto
 
----
+ACEES Group es un sistema integral de control de acceso que permite:
 
-## 🚨 Problema
-- Los keyloggers operan ocultos, disfrazándose como procesos legítimos.  
-- Antivirus tradicionales se basan en firmas conocidas, lo que limita la detección de variantes nuevas o polimórficas.  
-- Existe la necesidad de un sistema **inteligente** capaz de detectar comportamientos anómalos en tiempo real y actuar automáticamente.  
-
----
-
-## 🎯 Objetivos
-
-### Objetivo Principal
-Desarrollar un sistema híbrido en C++ y Python que permita la **detección en tiempo real** y **supresión automática de keyloggers** en entornos Windows, mediante técnicas de Machine Learning.
-
-### Objetivos Específicos
-1. Analizar las técnicas utilizadas por los keyloggers para capturar datos y mantenerse ocultos en Windows.  
-2. Diseñar un módulo en **C++** para captura de:  
-   - Procesos activos  
-   - Hooks de teclado  
-   - Tráfico de red  
-   - Modificaciones de archivos  
-3. Implementar en **Python** un modelo de Machine Learning (Random Forest, XGBoost o Isolation Forest) para clasificar procesos sospechosos.  
-4. Integrar la comunicación entre **C++ y Python** mediante **Named Pipes** o **Pybind11**.  
-5. Desarrollar un mecanismo de **supresión automática** que finalice procesos maliciosos y mueva archivos a cuarentena.  
-6. Validar el sistema en **entornos virtuales** (VirtualBox + Cuckoo Sandbox), midiendo:  
-   - Precisión  
-   - Recall  
-   - Tasa de falsos positivos  
-
----
+- **Autenticación de usuarios** con roles diferenciados (administrador/usuario)
+- **Escaneo de códigos QR/códigos de barras** para registro de entrada y salida
+- **Gestión de estudiantes** con registro completo de datos académicos
+- **Sistema de reportes** con gráficos y estadísticas
+- **Notificaciones y alarmas** para el control de acceso
+- **Registro de visitantes externos**
+- **Historial de movimientos** con filtros y búsquedas
 
 ## 🏗️ Arquitectura del Sistema
 
-```text
-+---------------------+       +----------------------+
-|  Módulo en C++      | <---> |  Modelo ML en Python |
-|  -----------------  |       |  ------------------  |
-| - Procesos activos  |       | - Random Forest      |
-| - Hooks de teclado  |       | - XGBoost / IForest  |
-| - Red y archivos    |       |                      |
-+---------------------+       +----------------------+
-        |                                 |
-        v                                 v
-Supresión automática          Decisión inteligente
- (kill / quarantine)          (detección en tiempo real)
+### Tecnologías Principales
+- **Flutter**: Framework de desarrollo multiplataforma
+- **Firebase**: Backend como servicio (Authentication, Firestore)
+- **Provider**: Gestión de estado
+- **Mobile Scanner**: Escaneo de códigos QR/códigos de barras
+
+### Estructura de la Aplicación
+
+#### Autenticación y Roles
+- Sistema de login con Firebase Authentication
+- Roles diferenciados: Administrador y Usuario
+- Wrapper automático que redirige según el rol del usuario
+
+#### Pantallas de Usuario (Estudiante)
+- **UserScannerScreen**: Pantalla principal con escáner QR para registro de entrada/salida
+- **UserHistoryScreen**: Historial personal de accesos
+- **UserNotificationsScreen**: Notificaciones del sistema
+- **UserAlarmDetailsScreen**: Detalles de alarmas de seguridad
+- **VisitorFormScreen**: Formulario para registro de visitantes
+
+#### Pantallas de Administrador
+- **AdminView**: Panel principal de administración
+- **AdminReportScreen**: Reportes generales del sistema
+- **AdminReportChartScreen**: Gráficos y estadísticas
+- **PendingExitScreen**: Gestión de salidas pendientes
+- **ExternalVisitsReportScreen**: Reportes de visitas externas
+- **AlarmDetailsScreen**: Gestión de alarmas del sistema
+
+#### Funcionalidades Clave
+- **Registro de Estudiantes**: Sistema completo de registro con facultades y escuelas
+- **Control de Acceso**: Doble entrada (Principal/Cochera) con validaciones
+- **Sistema TTS**: Retroalimentación por voz para confirmaciones
+- **Reportes Avanzados**: Gráficos con FL Chart para visualización de datos
+- **Gestión de Alarmas**: Sistema de notificaciones y seguimiento
+
+## 🚀 Características Técnicas
+
+### Dependencias Principales
+```yaml
+dependencies:
+  firebase_core: ^3.1.1           # Core de Firebase
+  firebase_auth: ^5.5.3           # Autenticación
+  cloud_firestore: ^5.0.1         # Base de datos NoSQL
+  mobile_scanner: ^3.3.0          # Escaneo QR/Códigos de barras
+  provider: ^6.1.1                # Gestión de estado
+  fl_chart: ^0.63.0                # Gráficos y estadísticas
+  flutter_tts: ^3.8.5             # Text-to-Speech
+  fluttertoast: ^8.2.2             # Notificaciones toast
+  google_fonts: ^6.1.0            # Fuentes personalizadas
+  intl: ^0.18.1                   # Internacionalización
 ```
 
-## 🛠️ Tecnologías Utilizadas
+### Plataformas Soportadas
+- ✅ Android
+- ✅ iOS
+- ✅ Web
+- ✅ Windows
+- ✅ macOS
+- ✅ Linux
 
-- Lenguajes: C++17, Python 3.10
+## 📱 Funcionalidades del Sistema
 
-- Machine Learning: scikit-learn, XGBoost
+### Para Usuarios (Estudiantes)
+1. **Escaneo de QR**: Registro rápido de entrada y salida
+2. **Historial Personal**: Consulta de movimientos propios
+3. **Registro de Visitantes**: Formulario para acompañantes
+4. **Notificaciones**: Alertas del sistema en tiempo real
 
-- Integración C++/Python: Pybind11, Named Pipes
+### Para Administradores
+1. **Panel de Control**: Vista general del sistema
+2. **Reportes Detallados**: Estadísticas de acceso por períodos
+3. **Gráficos Interactivos**: Visualización de datos con FL Chart
+4. **Gestión de Alarmas**: Control de eventos de seguridad
+5. **Reportes de Visitantes**: Seguimiento de accesos externos
 
-- Entorno de pruebas: VirtualBox, Cuckoo Sandbox
+## 🛠️ Instalación y Configuración
 
-- Sistema operativo objetivo: Windows 10/11
+### Requisitos Previos
+- Flutter SDK (v3.7.2 o superior)
+- Firebase CLI
+- Android Studio / VS Code
+- Git
 
-## ⚙️ Requisitos
+### Pasos de Instalación
 
-- Sistema Operativo: Windows 10/11
-
-- Compilador C++: MSVC o MinGW
-
-- Python: 3.10+
-
-**Dependencias de Python:**
-```
-pip install scikit-learn xgboost pandas numpy
-```
-
-**Entorno de pruebas: VirtualBox + Cuckoo Sandbox**
-
-## 🚀 Instalación y Ejecución
-**1️⃣ Clonar el repositorio**
-```
-git clone https://github.com/usuario/proyecto-keylogger-detection.git
-cd proyecto-keylogger-detection
-```
-**2️⃣ Compilar el módulo en C++**
-```
-g++ -std=c++17 -o detector detector.cpp
-```
-**3️⃣ Ejecutar el sistema**
-```
-./detector
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/KrCrimson/Acees_Group.git
+cd Acees_Group
 ```
 
-- El sistema se comunicará con el modelo en Python para clasificar procesos en tiempo real.
+2. **Instalar dependencias**
+```bash
+flutter pub get
+```
 
-## 📊 Métricas de Evaluación
+3. **Configurar Firebase**
+- Configurar proyecto en Firebase Console
+- Añadir archivos de configuración (`google-services.json` para Android, `GoogleService-Info.plist` para iOS)
+- Habilitar Authentication y Firestore
 
-- Precisión (Accuracy)
+4. **Ejecutar la aplicación**
+```bash
+flutter run
+```
 
-- Recall (Detección efectiva de amenazas)
+## 🏢 Base de Datos
 
-- Tasa de falsos positivos
+### Colecciones en Firestore
+- **usuarios**: Datos de usuarios con roles y permisos
+- **estudiantes**: Información académica completa
+- **facultades**: Catálogo de facultades
+- **escuelas**: Catálogo de escuelas profesionales
+- **accesos**: Registro de entradas y salidas
+- **visitantes**: Registro de visitantes externos
+- **alarmas**: Sistema de notificaciones y alertas
 
-## 🔒 Consideraciones de Seguridad
+## 🎯 Casos de Uso
 
-- El sistema debe ejecutarse con privilegios de administrador en Windows.
+1. **Registro de Acceso**: Estudiante escanea su código QR para registrar entrada/salida
+2. **Consulta de Reportes**: Administrador genera reportes de acceso por períodos
+3. **Registro de Visitantes**: Usuario registra visitante externo con datos completos
+4. **Gestión de Alarmas**: Sistema detecta y notifica eventos de seguridad
+5. **Análisis Estadístico**: Visualización de patrones de acceso con gráficos
 
-- El mecanismo de supresión está diseñado para usarse en entornos de prueba controlados.
 
-- No se recomienda su ejecución en producción sin validación exhaustiva.
+## 📝 Notas de Desarrollo
+
+- Utiliza arquitectura Provider para gestión de estado
+- Implementa principios de Material Design
+- Código documentado y estructurado modularmente
+- Preparado para despliegue en múltiples plataformas
+- Sistema escalable con Firebase como backend
+
+## 🔒 Seguridad
+
+- Autenticación robusta con Firebase Auth
+- Validación de roles en tiempo real
+- Encriptación de datos sensibles
+- Control de acceso por niveles de usuario
+
+## 📄 Licencia
+
+Este proyecto está desarrollado para uso académico y educativo.
+
+---
+
+*Desarrollado con ❤️ en Flutter por el equipo ACEES Group*
