@@ -1,0 +1,135 @@
+{
+  "total_tests": 25,
+  "passed": 15,
+  "failed": 10,
+  "warnings": 0,
+  "start_time": "2025-09-18T20:25:55.548740",
+  "end_time": "2025-09-18T20:27:00.063739",
+  "details": [
+    {
+      "name": "IMPORT_antivirus",
+      "passed": true,
+      "description": "Módulo principal importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.core.engine",
+      "passed": true,
+      "description": "Motor principal importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.monitors.network_monitor",
+      "passed": true,
+      "description": "Monitor de red importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.monitors.process_monitor",
+      "passed": true,
+      "description": "Monitor de procesos importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.monitors.file_monitor",
+      "passed": true,
+      "description": "Monitor de archivos importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.detectors.ml_detector",
+      "passed": true,
+      "description": "Detector ML importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.detectors.behavior_detector",
+      "passed": true,
+      "description": "Detector de comportamiento importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.detectors.network_detector",
+      "passed": true,
+      "description": "Detector de red importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.utils.file_scanner",
+      "passed": false,
+      "description": "Error importando Escáner de archivos: failed to find libmagic.  Check your installation"
+    },
+    {
+      "name": "ML_INIT",
+      "passed": true,
+      "description": "ML Detector inicializado"
+    },
+    {
+      "name": "ML_LOADED",
+      "passed": true,
+      "description": "Modelos ML cargados correctamente"
+    },
+    {
+      "name": "ML_PREDICTION",
+      "passed": false,
+      "description": "Error en predicción: 'MLKeyloggerDetector' object has no attribute 'predict_keylogger'"
+    },
+    {
+      "name": "NET_MONITOR_INIT",
+      "passed": true,
+      "description": "Network Monitor inicializado"
+    },
+    {
+      "name": "NET_MONITOR_ERROR",
+      "passed": false,
+      "description": "Error en Network Monitor: 'NetworkTrafficMonitor' object has no attribute '_get_network_connections'"
+    },
+    {
+      "name": "PROC_MONITOR_INIT",
+      "passed": true,
+      "description": "Process Monitor inicializado"
+    },
+    {
+      "name": "PROC_MONITOR_ERROR",
+      "passed": false,
+      "description": "Error en Process Monitor: 'ProcessBehaviorMonitor' object has no attribute '_get_running_processes'"
+    },
+    {
+      "name": "FILE_MONITOR_INIT",
+      "passed": true,
+      "description": "File Monitor inicializado"
+    },
+    {
+      "name": "BEHAVIOR_DETECTOR_ERROR",
+      "passed": false,
+      "description": "Error en Behavior Detector: cannot import name 'BehaviorAnalysisDetector' from 'antivirus.detectors.behavior_detector' (C:\\Users\\HP\\Documents\\GitHub\\proyecto-Anti-keylogger\\antivirus\\detectors\\behavior_detector.py)"
+    },
+    {
+      "name": "NETWORK_DETECTOR_INIT",
+      "passed": true,
+      "description": "Network Pattern Detector inicializado"
+    },
+    {
+      "name": "FILE_SCANNER_ERROR",
+      "passed": false,
+      "description": "Error en File Scanner: failed to find libmagic.  Check your installation"
+    },
+    {
+      "name": "CONFIG_TOML",
+      "passed": false,
+      "description": "Módulo toml no disponible"
+    },
+    {
+      "name": "ENGINE_INIT",
+      "passed": true,
+      "description": "Motor principal inicializado"
+    },
+    {
+      "name": "ENGINE_ML",
+      "passed": false,
+      "description": "ML Detector no integrado"
+    },
+    {
+      "name": "ENGINE_MONITORS",
+      "passed": false,
+      "description": "Solo 0 monitores integrados"
+    },
+    {
+      "name": "PERF_ERROR",
+      "passed": false,
+      "description": "Error en pruebas de rendimiento: 'MLKeyloggerDetector' object has no attribute 'predict_keylogger'"
+    }
+  ]
+}

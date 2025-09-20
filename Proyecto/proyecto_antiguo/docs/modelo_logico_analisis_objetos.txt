@@ -1,0 +1,223 @@
+# MODELO LÓGICO - ANÁLISIS DE OBJETOS
+# Proyecto Anti-Keylogger
+
+## 2.1 IDENTIFICACIÓN DE OBJETOS PRINCIPALES
+
+### OBJETOS DEL DOMINIO
+- Scanner: Entidad central que coordina el proceso de escaneo
+- FileMonitor: Responsable del monitoreo y análisis de archivos del sistema
+- ProcessMonitor: Encargado del monitoreo de procesos en ejecución
+- FeatureExtractor: Extrae características relevantes para el análisis ML
+- Predictor: Ejecuta la inferencia del modelo de Machine Learning
+- ThreatDetector: Evalúa y clasifica las amenazas detectadas
+- AlertManager: Gestiona la generación y presentación de alertas
+- LogManager: Administra el registro de eventos y alertas
+- ConfigManager: Maneja la configuración del sistema
+
+### OBJETOS DE DATOS
+- FileInfo: Contiene información sobre archivos analizados
+- ProcessInfo: Información sobre procesos del sistema
+- Features: Conjunto de características extraídas para ML
+- PredictionResult: Resultado de la predicción del modelo
+- ThreatInfo: Información detallada sobre amenazas detectadas
+- Alert: Estructura de datos para alertas generadas
+- LogEntry: Entrada individual de registro
+
+### OBJETOS DE INTERFAZ
+- ConsoleInterface: Interfaz de línea de comandos
+- MenuManager: Gestor de menús y navegación
+- ProgressDisplay: Visualización del progreso de escaneo
+
+## 2.2 ANÁLISIS DE RESPONSABILIDADES
+
+### Scanner
+RESPONSABILIDADES:
+- Iniciar y coordinar procesos de escaneo (total, específico, local)
+- Controlar el flujo de ejecución del análisis
+- Integrar componentes de monitoreo, extracción y predicción
+- Gestionar el estado del escaneo (en progreso, pausado, detenido)
+- Proporcionar información de progreso
+
+COLABORACIONES:
+- Utiliza FileMonitor y ProcessMonitor para obtener elementos a analizar
+- Delega extracción de características a FeatureExtractor
+- Solicita predicciones a Predictor
+- Coordina con ThreatDetector para evaluación de amenazas
+
+### FileMonitor
+RESPONSABILIDADES:
+- Escanear directorios y subdirectorios del sistema
+- Analizar archivos individuales y extraer metadata básica
+- Identificar tipos de archivo y propiedades ejecutables
+- Gestionar acceso al sistema de archivos de forma segura
+
+COLABORACIONES:
+- Proporciona FileInfo a Scanner
+- Utiliza utilidades del sistema para acceso a archivos
+- Interactúa con herramientas de análisis de ejecutables
+
+### ProcessMonitor
+RESPONSABILIDADES:
+- Monitorear procesos activos del sistema
+- Extraer información sobre procesos en ejecución
+- Identificar procesos sospechosos o con comportamiento anómalo
+- Obtener metadata de procesos (CPU, memoria, conexiones)
+
+COLABORACIONES:
+- Proporciona ProcessInfo a Scanner
+- Utiliza APIs del sistema operativo para acceso a procesos
+- Coordina con FeatureExtractor para análisis de procesos
+
+### FeatureExtractor
+RESPONSABILIDADES:
+- Extraer características numéricas de archivos y procesos
+- Calcular entropía de archivos
+- Analizar estructura de ejecutables (secciones, imports)
+- Normalizar y preparar datos para el modelo ML
+- Manejar diferentes tipos de archivo de forma apropiada
+
+COLABORACIONES:
+- Recibe FileInfo y ProcessInfo de monitores
+- Proporciona Features estructuradas a Predictor
+- Utiliza librerías especializadas (pefile, etc.)
+
+### Predictor
+RESPONSABILIDADES:
+- Cargar y gestionar modelos ML (.pkl y .onnx)
+- Ejecutar inferencia sobre Features extraídas
+- Validar integridad y compatibilidad de modelos
+- Proporcionar resultados de predicción con confidence scores
+- Manejar errores de inferencia
+
+COLABORACIONES:
+- Recibe Features de FeatureExtractor
+- Proporciona PredictionResult a ThreatDetector
+- Utiliza librerías ML (scikit-learn, onnxruntime)
+
+### ThreatDetector
+RESPONSABILIDADES:
+- Evaluar resultados de predicción ML
+- Aplicar reglas de negocio para clasificación de amenazas
+- Determinar nivel de severidad de amenazas
+- Generar información contextual sobre amenazas
+- Decidir acciones recomendadas
+
+COLABORACIONES:
+- Recibe PredictionResult de Predictor
+- Notifica AlertManager sobre amenazas detectadas
+- Proporciona ThreatInfo detallada
+
+### AlertManager
+RESPONSABILIDADES:
+- Generar alertas visuales y sonoras
+- Formatear mensajes de alerta para usuarios
+- Gestionar diferentes tipos de notificaciones
+- Coordinar respuestas a amenazas detectadas
+- Mantener historial de alertas
+
+COLABORACIONES:
+- Recibe notificaciones de ThreatDetector
+- Utiliza LogManager para persistir alertas
+- Interactúa con ConsoleInterface para mostrar alertas
+
+### LogManager
+RESPONSABILIDADES:
+- Registrar eventos del sistema en archivos de log
+- Gestionar rotación y archivado de logs
+- Proporcionar funciones de búsqueda y filtrado
+- Exportar reportes y estadísticas
+- Mantener logs de diferentes niveles (debug, info, warning, error)
+
+COLABORACIONES:
+- Utilizado por todos los componentes para logging
+- Gestiona archivos en sistema de archivos
+- Proporciona datos para generación de reportes
+
+### ConfigManager
+RESPONSABILIDADES:
+- Cargar configuración desde archivos
+- Validar parámetros de configuración
+- Proporcionar acceso centralizado a configuración
+- Gestionar configuración por defecto y personalizada
+- Persistir cambios de configuración
+
+COLABORACIONES:
+- Utilizado por todos los componentes para obtener configuración
+- Interactúa con sistema de archivos para persistencia
+
+## 2.3 PATRONES DE DISEÑO IDENTIFICADOS
+
+### Observer Pattern
+- ThreatDetector notifica a AlertManager sobre amenazas
+- LogManager observa eventos de todos los componentes
+
+### Strategy Pattern
+- Diferentes algoritmos de extracción de features según tipo de archivo
+- Múltiples modelos ML intercambiables (pkl vs onnx)
+
+### Factory Pattern
+- Creación de objetos FileInfo y ProcessInfo según contexto
+- Instanciación de diferentes tipos de monitores
+
+### Facade Pattern
+- Scanner actúa como fachada para el subsistema de análisis
+
+### Command Pattern
+- Acciones de respuesta a amenazas (cuarentena, eliminación, re-escaneo)
+
+## 2.4 FLUJOS DE INTERACCIÓN PRINCIPALES
+
+### Flujo de Escaneo Total
+1. Usuario solicita escaneo total via ConsoleInterface
+2. Scanner inicia FileMonitor para escaneo completo del sistema
+3. ProcessMonitor obtiene lista de procesos activos
+4. Para cada elemento encontrado:
+   - FeatureExtractor extrae características
+   - Predictor ejecuta inferencia ML
+   - ThreatDetector evalúa resultado
+   - Si es amenaza: AlertManager genera alerta y detiene escaneo
+5. LogManager registra todos los eventos
+
+### Flujo de Detección de Amenaza
+1. ThreatDetector identifica amenaza en PredictionResult
+2. Genera ThreatInfo con detalles contextuales
+3. Notifica AlertManager sobre la amenaza
+4. AlertManager formatea y presenta alerta al usuario
+5. LogManager registra alerta en archivo especial
+6. Scanner detiene escaneo y solicita acción del usuario
+7. Usuario selecciona acción (cuarentena/eliminación/re-escaneo)
+
+### Flujo de Configuración
+1. ConfigManager carga configuración al inicio
+2. Componentes consultan configuración según necesidad
+3. Usuario modifica configuración via ConsoleInterface
+4. ConfigManager valida y persiste cambios
+5. Componentes afectados actualizan su comportamiento
+
+## 2.5 CRITERIOS DE CALIDAD DEL DISEÑO
+
+### Cohesión Alta
+- Cada clase tiene responsabilidades bien definidas y relacionadas
+- Métodos dentro de cada clase colaboran hacia un objetivo común
+
+### Acoplamiento Bajo
+- Dependencias claras y minimizadas entre componentes
+- Uso de interfaces para reducir dependencias directas
+
+### Extensibilidad
+- Nuevos tipos de monitores pueden agregarse fácilmente
+- Diferentes modelos ML pueden integrarse sin cambios arquitectónicos
+
+### Testabilidad
+- Componentes pueden probarse de forma independiente
+- Dependencias externas pueden simularse para testing
+
+### Mantenibilidad
+- Separación clara de responsabilidades facilita localización de errores
+- Modificaciones en un componente tienen impacto limitado en otros
+
+---
+
+Este análisis de objetos proporciona la base para la implementación del sistema
+Anti-Keylogger, definiendo claramente las responsabilidades, colaboraciones y
+patrones que guiarán el desarrollo del software.

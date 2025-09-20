@@ -1,0 +1,135 @@
+# Configuración del Sistema Anti-Keylogger
+# ========================================
+
+[antivirus]
+# Configuración general del antivirus
+scan_interval = 30                    # Intervalo de escaneo en segundos
+real_time_protection = true           # Protección en tiempo real
+threat_threshold = 0.7                # Umbral de confianza para amenazas
+quarantine_enabled = true             # Habilitar cuarentena automática
+
+[ml_model]
+# Configuración del modelo de Machine Learning
+model_path = "models/development"     # Ruta a los modelos entrenados
+use_onnx = true                      # Usar modelo ONNX optimizado
+confidence_threshold = 0.8           # Umbral de confianza para ML
+fallback_to_sklearn = true          # Fallback a sklearn si ONNX falla
+
+[monitoring]
+# Configuración de monitores del sistema
+network_traffic = true               # Monitorear tráfico de red
+process_behavior = true              # Monitorear comportamiento de procesos
+file_system = true                   # Monitorear sistema de archivos
+registry_changes = true              # Monitorear cambios en registro
+
+[network_monitor]
+# Configuración específica del monitor de red
+monitor_interval = 1.0               # Intervalo de captura en segundos
+capture_outbound = true              # Capturar conexiones salientes
+capture_inbound = true               # Capturar conexiones entrantes
+buffer_size = 1000                   # Tamaño del buffer de datos
+suspicious_ports = [21, 22, 23, 25, 53, 80, 443, 993, 995]
+
+[process_monitor]
+# Configuración del monitor de procesos
+scan_interval = 2.0                  # Intervalo de escaneo en segundos
+track_new_processes = true           # Rastrear procesos nuevos
+monitor_file_access = true           # Monitorear acceso a archivos
+monitor_network_connections = true   # Monitorear conexiones de red
+monitor_keyboard_hooks = true        # Monitorear hooks de teclado
+buffer_size = 500                    # Tamaño del buffer
+
+[file_monitor]
+# Configuración del monitor de archivos
+scan_interval = 5.0                  # Intervalo de escaneo en segundos
+buffer_size = 1000                   # Tamaño del buffer
+max_file_size_mb = 100              # Tamaño máximo de archivo para análisis
+quarantine_directory = "C:\\Quarantine"  # Directorio de cuarentena
+
+# Directorios a monitorear
+monitored_directories = [
+    "%USERPROFILE%",                 # Directorio del usuario
+    "C:\\Windows\\Temp",
+    "C:\\Temp", 
+    "C:\\Users\\Public",
+    "%APPDATA%",
+    "%LOCALAPPDATA%",
+    "%TEMP%"
+]
+
+# Extensiones sospechosas
+suspicious_extensions = [
+    ".exe", ".dll", ".scr", ".pif", ".com", 
+    ".bat", ".cmd", ".vbs", ".js", ".jar", 
+    ".tmp", ".log"
+]
+
+# Extensiones a ignorar
+ignore_extensions = [
+    ".jpg", ".png", ".gif", ".bmp", ".ico",
+    ".mp3", ".mp4", ".avi", ".mkv", ".pdf",
+    ".doc", ".docx", ".xlsx"
+]
+
+[behavior_detector]
+# Configuración del detector de comportamiento
+min_confidence = 0.6                # Confianza mínima para detección
+enable_heuristics = true            # Habilitar análisis heurístico
+
+[network_detector]
+# Configuración del detector de patrones de red
+min_connections_for_pattern = 3     # Mínimo de conexiones para análisis
+beacon_interval_tolerance = 0.3     # Tolerancia para intervalos de beacon
+c2_confidence_threshold = 0.7       # Umbral para detección C2
+data_exfiltration_threshold = 0.6   # Umbral para exfiltración de datos
+max_tracking_age_hours = 24         # Tiempo máximo de tracking
+
+[ml_detector]
+# Configuración específica del detector ML
+prediction_batch_size = 32          # Tamaño de lote para predicciones
+feature_cache_size = 1000           # Tamaño de caché de características
+enable_feature_engineering = true   # Habilitar ingeniería de características
+
+[file_scanner]
+# Configuración del escáner de archivos
+max_file_size_mb = 100              # Tamaño máximo para escaneo
+scan_archives = false               # Escanear archivos comprimidos
+deep_scan = true                    # Escaneo profundo de contenido
+calculate_hashes = true             # Calcular hashes de archivos
+hash_cache_size = 10000             # Tamaño de caché de hashes
+
+[logging]
+# Configuración de logging
+level = "INFO"                      # Nivel de log (DEBUG, INFO, WARNING, ERROR)
+file_path = "antivirus.log"         # Archivo de log principal
+security_log_path = "security_events.log"  # Log de eventos de seguridad
+max_log_size_mb = 100              # Tamaño máximo de archivo de log
+backup_count = 5                    # Número de backups de log
+
+[notifications]
+# Configuración de notificaciones
+enable_desktop_notifications = true # Notificaciones de escritorio
+enable_email_alerts = false        # Alertas por email
+email_smtp_server = ""              # Servidor SMTP
+email_recipient = ""                # Destinatario de alertas
+
+[performance]
+# Configuración de rendimiento
+max_cpu_usage = 25                  # Uso máximo de CPU (%)
+max_memory_usage_mb = 512           # Uso máximo de memoria (MB)
+enable_performance_monitoring = true # Monitorear rendimiento
+auto_throttle = true                # Throttling automático si uso alto
+
+[updates]
+# Configuración de actualizaciones
+auto_update_signatures = true       # Actualizar firmas automáticamente
+signature_update_interval = 24      # Intervalo de actualización (horas)
+update_server_url = ""              # URL del servidor de actualizaciones
+enable_threat_intelligence = true   # Habilitar threat intelligence
+
+[advanced]
+# Configuraciones avanzadas
+enable_sandbox_analysis = false     # Análisis en sandbox (futuro)
+enable_cloud_analysis = false       # Análisis en la nube (futuro)
+debug_mode = false                  # Modo debug
+verbose_logging = false             # Logging detallado

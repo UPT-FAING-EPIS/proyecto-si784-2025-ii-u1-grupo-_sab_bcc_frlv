@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ThWGDaqq4ec=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\windows10\\Documents\\GitHub\\proyecto-Anti-keylogger\\proyecto_antiguo\\backup\\AntiKeyloggerApp\\AntiKeyloggerApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\windows10\\.nuget\\packages\\microsoft.ml.onnxruntime.gpu\\1.22.1\\microsoft.ml.onnxruntime.gpu.1.22.1.nupkg.sha512",
+    "C:\\Users\\windows10\\.nuget\\packages\\microsoft.ml.onnxruntime.gpu.linux\\1.22.1\\microsoft.ml.onnxruntime.gpu.linux.1.22.1.nupkg.sha512",
+    "C:\\Users\\windows10\\.nuget\\packages\\microsoft.ml.onnxruntime.gpu.windows\\1.22.1\\microsoft.ml.onnxruntime.gpu.windows.1.22.1.nupkg.sha512",
+    "C:\\Users\\windows10\\.nuget\\packages\\microsoft.ml.onnxruntime.managed\\1.22.1\\microsoft.ml.onnxruntime.managed.1.22.1.nupkg.sha512",
+    "C:\\Users\\windows10\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\windows10\\.nuget\\packages\\system.numerics.tensors\\9.0.0\\system.numerics.tensors.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

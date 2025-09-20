@@ -1,0 +1,13 @@
+{
+  "name": "anti-keylogger-api",
+  "version": "1.0.0",
+  "description": "API para detectar keyloggers usando Machine Learning",
+  "main": "main.py",
+  "scripts": {
+    "start": "uvicorn main:app --host 0.0.0.0 --port $PORT",
+    "build": "pip install -r requirements.txt"
+  },
+  "keywords": ["antivirus", "keylogger", "machine-learning", "api"],
+  "author": "KrCrimson",
+  "license": "MIT"
+}

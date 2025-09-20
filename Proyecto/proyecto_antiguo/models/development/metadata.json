@@ -1,0 +1,12 @@
+{
+  "model_name": "modelo_keylogger_from_datos",
+  "version": "v1.0.0",
+  "build_date": "2025-09-03",
+  "dataset_hash": "<sha256_or_placeholder>",
+  "sklearn_version": "unknown",
+  "skl2onnx_version": "unknown",
+  "onnx_version": "unknown",
+  "onnxruntime_version": "1.22.2",
+  "features_file": "modelo_keylogger_from_datos_features_clean.json",
+  "notes": "Rellena campos reales: versiones y dataset_hash"
+}

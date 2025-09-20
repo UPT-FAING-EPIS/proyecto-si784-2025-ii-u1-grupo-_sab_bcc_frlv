@@ -1,0 +1,140 @@
+{
+  "total_tests": 26,
+  "passed": 15,
+  "failed": 11,
+  "warnings": 0,
+  "start_time": "2025-09-18T12:34:13.206467",
+  "end_time": "2025-09-18T12:34:13.720190",
+  "details": [
+    {
+      "name": "IMPORT_antivirus",
+      "passed": true,
+      "description": "Módulo principal importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.core.engine",
+      "passed": true,
+      "description": "Motor principal importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.monitors.network_monitor",
+      "passed": true,
+      "description": "Monitor de red importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.monitors.process_monitor",
+      "passed": true,
+      "description": "Monitor de procesos importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.monitors.file_monitor",
+      "passed": true,
+      "description": "Monitor de archivos importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.detectors.ml_detector",
+      "passed": true,
+      "description": "Detector ML importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.detectors.behavior_detector",
+      "passed": true,
+      "description": "Detector de comportamiento importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.detectors.network_detector",
+      "passed": true,
+      "description": "Detector de red importado correctamente"
+    },
+    {
+      "name": "IMPORT_antivirus.utils.file_scanner",
+      "passed": false,
+      "description": "Error importando Escáner de archivos: No module named 'magic'"
+    },
+    {
+      "name": "ML_ERROR",
+      "passed": false,
+      "description": "Error en pruebas ML: Modelo sklearn no encontrado: models\\modelo_keylogger_from_datos.pkl"
+    },
+    {
+      "name": "NET_MONITOR_INIT",
+      "passed": true,
+      "description": "Network Monitor inicializado"
+    },
+    {
+      "name": "NET_MONITOR_ERROR",
+      "passed": false,
+      "description": "Error en Network Monitor: 'NetworkTrafficMonitor' object has no attribute '_get_network_connections'"
+    },
+    {
+      "name": "PROC_MONITOR_INIT",
+      "passed": true,
+      "description": "Process Monitor inicializado"
+    },
+    {
+      "name": "PROC_MONITOR_ERROR",
+      "passed": false,
+      "description": "Error en Process Monitor: 'ProcessBehaviorMonitor' object has no attribute '_get_running_processes'"
+    },
+    {
+      "name": "FILE_MONITOR_INIT",
+      "passed": true,
+      "description": "File Monitor inicializado"
+    },
+    {
+      "name": "BEHAVIOR_DETECTOR_ERROR",
+      "passed": false,
+      "description": "Error en Behavior Detector: cannot import name 'BehaviorAnalysisDetector' from 'antivirus.detectors.behavior_detector' (C:\\Users\\windows10\\Documents\\GitHub\\Python_ML\\antivirus\\detectors\\behavior_detector.py)"
+    },
+    {
+      "name": "NETWORK_DETECTOR_INIT",
+      "passed": true,
+      "description": "Network Pattern Detector inicializado"
+    },
+    {
+      "name": "FILE_SCANNER_ERROR",
+      "passed": false,
+      "description": "Error en File Scanner: No module named 'magic'"
+    },
+    {
+      "name": "CONFIG_MONITORING",
+      "passed": true,
+      "description": "Sección monitoring presente"
+    },
+    {
+      "name": "CONFIG_DETECTION",
+      "passed": false,
+      "description": "Sección detection faltante"
+    },
+    {
+      "name": "CONFIG_LOGGING",
+      "passed": true,
+      "description": "Sección logging presente"
+    },
+    {
+      "name": "CONFIG_SECURITY",
+      "passed": false,
+      "description": "Sección security faltante"
+    },
+    {
+      "name": "ENGINE_INIT",
+      "passed": true,
+      "description": "Motor principal inicializado"
+    },
+    {
+      "name": "ENGINE_ML",
+      "passed": false,
+      "description": "ML Detector no integrado"
+    },
+    {
+      "name": "ENGINE_MONITORS",
+      "passed": false,
+      "description": "Solo 0 monitores integrados"
+    },
+    {
+      "name": "PERF_ERROR",
+      "passed": false,
+      "description": "Error en pruebas de rendimiento: Modelo sklearn no encontrado: models\\modelo_keylogger_from_datos.pkl"
+    }
+  ]
+}

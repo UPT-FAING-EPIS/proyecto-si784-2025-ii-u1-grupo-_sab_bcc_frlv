@@ -1,0 +1,31 @@
+{
+  "model": {
+    "model_path": "modelos/modelo_keylogger_from_datos.onnx",
+    "features_path": "modelos/modelo_keylogger_from_datos_features.json",
+    "labels_path": "modelos/label_classes.json",
+    "threat_threshold": 0.6,
+    "model_type": "auto"
+  },
+  "monitoring": {
+    "watch_directory": "C:\\Users\\windows10\\Downloads",
+    "scan_interval": 10,
+    "monitor_processes": true,
+    "monitor_files": true,
+    "max_file_size": 104857600,
+    "excluded_extensions": [".log", ".tmp", ".temp", ".cache"]
+  },
+  "logging": {
+    "log_directory": "logs",
+    "log_level": "INFO",
+    "max_log_size": 10485760,
+    "console_output": true,
+    "file_output": true
+  },
+  "alerts": {
+    "alert_directory": "logs",
+    "console_alerts": true,
+    "file_alerts": true,
+    "stop_on_threat": false,
+    "alert_threshold": 0.6
+  }
+}

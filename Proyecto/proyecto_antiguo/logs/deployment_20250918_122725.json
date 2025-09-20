@@ -1,0 +1,92 @@
+[
+  {
+    "step": "PYTHON_VERSION",
+    "success": true,
+    "description": "Python 3.13",
+    "timestamp": "2025-09-18T12:27:16.752972"
+  },
+  {
+    "step": "PIP_AVAILABLE",
+    "success": true,
+    "description": "pip disponible",
+    "timestamp": "2025-09-18T12:27:17.050898"
+  },
+  {
+    "step": "PROJECT_STRUCTURE",
+    "success": true,
+    "description": "Estructura de proyecto correcta",
+    "timestamp": "2025-09-18T12:27:17.051081"
+  },
+  {
+    "step": "INSTALLATION",
+    "success": true,
+    "description": "Instalación completada",
+    "timestamp": "2025-09-18T12:27:24.600749"
+  },
+  {
+    "step": "TRAINING_DATA",
+    "success": false,
+    "description": "Archivo de datos no encontrado",
+    "timestamp": "2025-09-18T12:27:24.601018"
+  },
+  {
+    "step": "SYSTEM_TESTS",
+    "success": false,
+    "description": "Algunas pruebas fallaron",
+    "timestamp": "2025-09-18T12:27:24.670268"
+  },
+  {
+    "step": "CONFIG_FILE",
+    "success": true,
+    "description": "Archivo de configuración encontrado",
+    "timestamp": "2025-09-18T12:27:24.671817"
+  },
+  {
+    "step": "DIR_LOGS",
+    "success": true,
+    "description": "Directorio logs configurado",
+    "timestamp": "2025-09-18T12:27:24.672038"
+  },
+  {
+    "step": "DIR_QUARANTINE",
+    "success": true,
+    "description": "Directorio quarantine configurado",
+    "timestamp": "2025-09-18T12:27:24.672233"
+  },
+  {
+    "step": "DIR_TEMP",
+    "success": true,
+    "description": "Directorio temp configurado",
+    "timestamp": "2025-09-18T12:27:24.674499"
+  },
+  {
+    "step": "DIR_DATA/EXPORTS",
+    "success": true,
+    "description": "Directorio data/exports configurado",
+    "timestamp": "2025-09-18T12:27:24.674790"
+  },
+  {
+    "step": "DIR_DATA/BACKUPS",
+    "success": true,
+    "description": "Directorio data/backups configurado",
+    "timestamp": "2025-09-18T12:27:24.676744"
+  },
+  {
+    "step": "MAINTENANCE",
+    "success": false,
+    "description": "Error en mantenimiento: Command '['C:\\\\Program Files\\\\Python313\\\\python.exe', 'C:\\\\Users\\\\windows10\\\\Documents\\\\GitHub\\\\Python_ML\\\\maintenance.py', 'standard']' returned non-zero exit status 1.",
+    "timestamp": "2025-09-18T12:27:24.849448"
+  },
+  {
+    "step": "LAUNCHER_TEST",
+    "success": false,
+    "description": "Error en launcher: Command '['C:\\\\Program Files\\\\Python313\\\\python.exe', 'C:\\\\Users\\\\windows10\\\\Documents\\\\GitHub\\\\Python_ML\\\\antivirus_launcher.py', '--info']' returned non-zero exit status 1.",
+    "timestamp": "2025-09-18T12:27:25.357787"
+  },
+  {
+    "step": "MODULE_IMPORT",
+    "success": true,
+    "description": "Módulos principales importables",
+    "timestamp": "2025-09-18T12:27:25.367569"
+  }
+]

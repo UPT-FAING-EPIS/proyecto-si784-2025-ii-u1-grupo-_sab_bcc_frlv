@@ -1,0 +1,108 @@
+# Configuración del Pipeline de ML - Anti-Keylogger
+# ================================================
+
+[pipeline]
+# Configuración general del pipeline
+project_name = "Anti-Keylogger ML Pipeline"
+version = "1.0.0"
+author = "Data Science Team"
+
+[data]
+# Configuración de datos
+raw_data_dir = "data/raw"
+processed_data_dir = "data/processed"
+external_data_dir = "data/external"
+features_data_dir = "data/features"
+
+# Formatos soportados
+supported_formats = ["csv", "parquet", "pickle", "hdf5"]
+preferred_format = "parquet"
+
+# Configuración de preprocesamiento
+missing_threshold = 0.95  # Eliminar columnas con >95% valores faltantes
+outlier_method = "iqr"    # Métodos: iqr, zscore, isolation_forest
+scaling_method = "standard"  # Métodos: standard, minmax, robust
+encoding_method = "onehot"   # Métodos: onehot, label, target
+
+[models]
+# Configuración de modelos
+models_dir = "models"
+development_dir = "models/development"
+production_dir = "models/production"
+experiments_dir = "models/experiments"
+
+# Algoritmos a entrenar
+algorithms = ["random_forest", "xgboost", "lightgbm"]
+
+# Configuración de entrenamiento
+test_size = 0.2
+random_state = 42
+cv_folds = 5
+scoring_metric = "f1_weighted"
+
+# Configuración de Grid Search
+n_jobs = -1  # Usar todos los cores
+verbose = 1
+
+[hyperparameters]
+# Hiperparámetros para Random Forest
+[hyperparameters.random_forest]
+n_estimators = [100, 200, 300]
+max_depth = [10, 20, "None"]
+min_samples_split = [2, 5, 10]
+min_samples_leaf = [1, 2, 4]
+max_features = ["sqrt", "log2"]
+
+# Hiperparámetros para XGBoost
+[hyperparameters.xgboost]
+n_estimators = [100, 200]
+max_depth = [6, 10, 15]
+learning_rate = [0.01, 0.1, 0.2]
+subsample = [0.8, 1.0]
+colsample_bytree = [0.8, 1.0]
+
+# Hiperparámetros para LightGBM
+[hyperparameters.lightgbm]
+n_estimators = [100, 200]
+max_depth = [10, 20, -1]
+learning_rate = [0.01, 0.1]
+num_leaves = [31, 62, 127]
+feature_fraction = [0.8, 1.0]
+
+[evaluation]
+# Configuración de evaluación
+evaluation_dir = "models/evaluation"
+metrics = ["accuracy", "precision", "recall", "f1_score", "roc_auc"]
+
+# Umbrales para alertas
+min_accuracy = 0.85
+min_f1_score = 0.80
+max_false_positive_rate = 0.05
+
+[deployment]
+# Configuración de deployment
+predictions_dir = "models/predictions"
+api_host = "0.0.0.0"
+api_port = 8000
+
+# Configuración de batch processing
+batch_chunk_size = 10000
+max_batch_size = 100000
+
+[logging]
+# Configuración de logging
+log_level = "INFO"
+log_file = "logs/pipeline.log"
+max_log_size = "10MB"
+backup_count = 5
+
+[monitoring]
+# Configuración de monitoreo
+enable_drift_detection = true
+drift_threshold = 0.05
+confidence_threshold = 0.7
+
+# Métricas de rendimiento
+track_latency = true
+track_memory_usage = true
+track_cpu_usage = true

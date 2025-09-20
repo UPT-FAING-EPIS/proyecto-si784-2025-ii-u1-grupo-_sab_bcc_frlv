@@ -1,0 +1,20 @@
+# Dependencias MÍNIMAS para el Antivirus en Producción
+# ====================================================
+
+# Machine Learning Core
+numpy>=1.24.0
+scikit-learn>=1.3.0
+onnxruntime>=1.16.0
+
+# Sistema y Monitoreo
+psutil>=5.9.0
+pefile>=2023.2.7
+
+# Configuración
+toml>=0.10.0
+
+# Notas:
+# - pandas NO es necesario para el antivirus en producción
+# - pyarrow NO es necesario para el antivirus en producción
+# - python-magic es opcional (funciona sin él)
+# - argparse, json, pathlib son parte de Python estándar

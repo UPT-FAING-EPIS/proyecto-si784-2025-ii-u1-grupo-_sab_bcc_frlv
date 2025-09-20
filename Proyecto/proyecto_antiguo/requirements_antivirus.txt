@@ -1,0 +1,34 @@
+# Dependencias adicionales para el Sistema Anti-Keylogger
+# =====================================================
+
+# Dependencias core ya instaladas
+# numpy
+# pandas 
+# scikit-learn
+# matplotlib
+# seaborn
+# plotly
+# fastapi
+# uvicorn
+# onnxruntime
+# joblib
+
+# Dependencias específicas del antivirus
+psutil>=5.9.0               # Monitoreo de procesos y sistema
+toml>=0.10.2               # Configuración TOML
+python-magic>=0.4.27       # Detección de tipos de archivo
+watchdog>=2.1.9            # Monitoreo de sistema de archivos (opcional)
+py-cpuinfo>=9.0.0          # Información del CPU (opcional)
+netifaces>=0.11.0          # Interfaces de red (opcional)
+
+# Opcional: para análisis avanzado
+cryptography>=3.4.8       # Análisis de archivos cifrados
+pefile>=2023.2.7          # Análisis de ejecutables PE (Windows)
+yara-python>=4.2.3        # Reglas YARA (opcional)
+
+# Opcional: para notificaciones
+plyer>=2.1                 # Notificaciones multiplataforma
+
+# Opcional: para interfaz gráfica (futuro)
+tkinter                    # GUI básica (incluido en Python)
+PyQt5>=5.15.7             # GUI avanzada (opcional)

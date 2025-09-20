@@ -1,0 +1,634 @@
+2025-09-20 01:27:49,753 - antivirus.detectors.ml_detector - ERROR - [ERROR] Error cargando ONNX: Modelo ONNX no encontrado: models\modelo_keylogger_from_datos.onnx
+2025-09-20 01:27:49,753 - antivirus.detectors.ml_detector - ERROR - [ERROR] Error cargando modelo: Modelo ONNX no encontrado: models\modelo_keylogger_from_datos.onnx
+2025-09-20 01:27:49,753 - antivirus.detectors.ml_detector - INFO - [SYNC] Fallback a modelo sklearn...
+2025-09-20 01:27:49,753 - antivirus.detectors.ml_detector - ERROR - [ERROR] Error cargando sklearn: Ningún modelo sklearn encontrado en models
+2025-09-20 01:28:41,765 - antivirus.core.engine - WARNING - [WARNING] No se pudo cargar config: [Errno 2] No such file or directory: 'config.toml'
+2025-09-20 01:28:42,003 - antivirus.detectors.ml_detector - ERROR - [ERROR] Error cargando ONNX: Modelo ONNX no encontrado: models\development\modelo_keylogger_from_datos.onnx
+2025-09-20 01:28:42,003 - antivirus.detectors.ml_detector - ERROR - [ERROR] Error cargando modelo: Modelo ONNX no encontrado: models\development\modelo_keylogger_from_datos.onnx
+2025-09-20 01:28:42,003 - antivirus.detectors.ml_detector - INFO - [SYNC] Fallback a modelo sklearn...
+2025-09-20 01:28:42,004 - antivirus.detectors.ml_detector - ERROR - [ERROR] Error cargando sklearn: Ningún modelo sklearn encontrado en models\development
+2025-09-20 01:28:42,004 - antivirus.core.engine - ERROR - [ERROR] Error inicializando ML detector: Ningún modelo sklearn encontrado en models\development
+2025-09-20 01:28:42,006 - antivirus.monitors.network_monitor - INFO - [NET] NetworkTrafficMonitor inicializado
+2025-09-20 01:28:42,006 - antivirus.core.engine - INFO - [NET] Monitor de red inicializado
+2025-09-20 01:28:42,006 - antivirus.monitors.process_monitor - INFO - [PROC] ProcessBehaviorMonitor inicializado
+2025-09-20 01:28:42,006 - antivirus.core.engine - INFO - [PROC] Monitor de procesos inicializado
+2025-09-20 01:28:42,006 - antivirus.monitors.file_monitor - INFO - [FILE] FileSystemMonitor inicializado
+2025-09-20 01:28:42,006 - antivirus.core.engine - INFO - [FILE] Monitor de archivos inicializado
+2025-09-20 01:28:42,006 - antivirus.detectors.behavior_detector - INFO - [SEARCH] BehaviorDetector inicializado
+2025-09-20 01:28:42,006 - antivirus.detectors.network_detector - INFO - [INFO] Cargadas 3 IPs maliciosas y 3 dominios sospechosos
+2025-09-20 01:28:42,007 - antivirus.detectors.network_detector - INFO - [NET] NetworkPatternDetector inicializado
+2025-09-20 01:28:42,007 - antivirus.core.engine - INFO - [SEARCH] Detectores especializados inicializados
+2025-09-20 01:28:42,007 - antivirus.core.engine - INFO - [SHIELD] Anti-Keylogger Engine inicializado
+2025-09-20 01:28:42,007 - antivirus.facade - WARNING - No se pudo configurar sensibilidad: ML detector no disponible
+2025-09-20 01:28:42,007 - antivirus.core.engine - INFO - [SHIELD] Iniciando protección anti-keylogger...
+2025-09-20 01:28:42,008 - antivirus.core.engine - INFO - [SYNC] Monitor network iniciado
+2025-09-20 01:28:42,008 - antivirus.monitors.network_monitor - INFO - [SEARCH] Iniciando bucle de monitoreo de red...
+2025-09-20 01:28:42,008 - antivirus.monitors.network_monitor - INFO - [SYNC] Monitor de red iniciado
+2025-09-20 01:28:42,027 - antivirus.core.engine - INFO - [SYNC] Monitor process iniciado
+2025-09-20 01:28:42,218 - antivirus.core.engine - INFO - [SYNC] Monitor filesystem iniciado
+2025-09-20 01:28:42,233 - antivirus.monitors.file_monitor - INFO - [PACKAGE] Directorio de cuarentena: C:\Quarantine
+2025-09-20 01:28:42,263 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:28:42,281 - antivirus.core.engine - INFO - [SEARCH] Iniciando escaneo del sistema...
+2025-09-20 01:28:42,314 - antivirus.monitors.file_monitor - INFO - [SEARCH] Iniciando escaneo inicial de archivos...
+2025-09-20 01:28:42,314 - antivirus.core.engine - INFO - [OK] Protección en tiempo real activa
+2025-09-20 01:28:42,360 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:28:42,502 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:28:42,530 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.52:443
+2025-09-20 01:28:42,563 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:28:42,610 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:28:42,623 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.137.234:443
+2025-09-20 01:28:42,641 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:28:42,672 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.114.26:443
+2025-09-20 01:28:42,687 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:28:42,718 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.23.210:443
+2025-09-20 01:28:42,780 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:28:42,796 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.188.247.146:443
+2025-09-20 01:28:42,811 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:28:42,860 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:42,875 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.38:443
+2025-09-20 01:28:42,926 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:28:42,956 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:28:43,174 - antivirus.monitors.process_monitor - INFO - [DATA] Snapshot inicial: 316 procesos
+2025-09-20 01:28:43,174 - antivirus.monitors.process_monitor - INFO - [SEARCH] Iniciando bucle de monitoreo de procesos...
+2025-09-20 01:28:43,174 - antivirus.monitors.process_monitor - INFO - [SYNC] Monitor de procesos iniciado
+2025-09-20 01:28:43,387 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 1428) - sudden_file_access_increase
+2025-09-20 01:28:43,394 - antivirus.core.engine - WARNING - [LOCK] Proceso 1428 terminado (cuarentena)
+2025-09-20 01:28:43,657 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 1956) - sudden_file_access_increase
+2025-09-20 01:28:43,818 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: msedgewebview2.exe (PID: 2144) - sudden_file_access_increase
+2025-09-20 01:28:44,287 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.173.9:443
+2025-09-20 01:28:44,287 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:28:44,288 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:28:44,288 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:28:44,288 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.52:443
+2025-09-20 01:28:44,288 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:28:44,289 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: GitHubDesktop.exe (PID: 2612) - sudden_file_access_increase
+2025-09-20 01:28:44,289 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:28:44,316 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.137.234:443
+2025-09-20 01:28:44,347 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:28:44,379 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.114.26:443
+2025-09-20 01:28:44,408 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:28:44,501 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.23.210:443
+2025-09-20 01:28:44,501 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:28:44,534 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.188.247.146:443
+2025-09-20 01:28:44,552 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:28:44,582 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:44,612 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.38:443
+2025-09-20 01:28:44,722 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:28:44,722 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:28:44,723 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 4428) - sudden_file_access_increase
+2025-09-20 01:28:44,980 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: msedge.exe (PID: 5160) - sudden_file_access_increase
+2025-09-20 01:28:45,227 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 5528) - sudden_file_access_increase
+2025-09-20 01:28:45,555 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: Code.exe (PID: 5936) - sudden_file_access_increase
+2025-09-20 01:28:45,557 - antivirus.core.engine - WARNING - [LOCK] Proceso 5936 terminado (cuarentena)
+2025-09-20 01:28:46,109 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:28:46,196 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:28:46,328 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:28:46,328 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.52:443
+2025-09-20 01:28:46,328 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:28:46,328 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:28:46,329 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.137.234:443
+2025-09-20 01:28:46,329 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:28:46,329 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.114.26:443
+2025-09-20 01:28:46,329 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:28:46,330 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.23.210:443
+2025-09-20 01:28:46,330 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:28:46,330 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.188.247.146:443
+2025-09-20 01:28:46,330 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:28:46,331 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 8140) - sudden_file_access_increase
+2025-09-20 01:28:46,331 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:46,425 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.38:443
+2025-09-20 01:28:46,425 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:28:46,425 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:28:46,426 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 8264) - sudden_file_access_increase
+2025-09-20 01:28:46,429 - antivirus.core.engine - WARNING - [LOCK] Proceso 8264 terminado (cuarentena)
+2025-09-20 01:28:46,546 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 8516) - sudden_file_access_increase
+2025-09-20 01:28:46,549 - antivirus.core.engine - WARNING - [LOCK] Proceso 8516 terminado (cuarentena)
+2025-09-20 01:28:46,843 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 9148) - sudden_file_access_increase
+2025-09-20 01:28:46,846 - antivirus.core.engine - WARNING - [LOCK] Proceso 9148 terminado (cuarentena)
+2025-09-20 01:28:47,051 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: Code.exe (PID: 9796) - sudden_file_access_increase
+2025-09-20 01:28:47,327 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: svchost.exe (PID: 10584) - sudden_file_access_increase
+2025-09-20 01:28:47,757 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:28:47,757 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:28:47,757 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:28:47,757 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.52:443
+2025-09-20 01:28:47,758 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:28:47,758 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:28:47,758 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.137.234:443
+2025-09-20 01:28:47,758 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:28:47,758 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.114.26:443
+2025-09-20 01:28:47,759 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:28:47,759 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.23.210:443
+2025-09-20 01:28:47,759 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:28:47,759 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.188.247.146:443
+2025-09-20 01:28:47,759 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:28:47,760 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:47,760 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.38:443
+2025-09-20 01:28:47,760 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:28:47,760 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:28:47,762 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: IntelGraphicsSoftware.exe (PID: 10596) - sudden_file_access_increase
+2025-09-20 01:28:47,934 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: GitHubDesktop.exe (PID: 10628) - sudden_file_access_increase
+2025-09-20 01:28:47,937 - antivirus.core.engine - WARNING - [LOCK] Proceso 10628 terminado (cuarentena)
+2025-09-20 01:28:48,371 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 11008) - sudden_file_access_increase
+2025-09-20 01:28:48,375 - antivirus.core.engine - WARNING - [LOCK] Proceso 11008 terminado (cuarentena)
+2025-09-20 01:28:49,104 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:28:49,104 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:28:49,105 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:28:49,105 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.52:443
+2025-09-20 01:28:49,105 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:28:49,105 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:28:49,105 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.137.234:443
+2025-09-20 01:28:49,105 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:28:49,106 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:28:49,106 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.23.210:443
+2025-09-20 01:28:49,106 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:28:49,106 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.188.247.146:443
+2025-09-20 01:28:49,106 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:28:49,107 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:49,107 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.38:443
+2025-09-20 01:28:49,107 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:28:49,107 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:28:49,109 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: explorer.exe (PID: 11408) - sudden_file_access_increase
+2025-09-20 01:28:50,349 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:28:50,350 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 12848) - sudden_file_access_increase
+2025-09-20 01:28:50,350 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:28:50,479 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:28:50,479 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:50,479 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.52:443
+2025-09-20 01:28:50,480 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:28:50,480 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: StartMenuExperienceHost.exe (PID: 12912) - sudden_file_access_increase
+2025-09-20 01:28:50,481 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:28:50,554 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.137.234:443
+2025-09-20 01:28:50,693 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:28:50,694 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:28:50,694 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.23.210:443
+2025-09-20 01:28:50,694 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:28:50,694 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.188.247.146:443
+2025-09-20 01:28:50,695 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:28:50,695 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: Widgets.exe (PID: 13060) - sudden_file_access_increase
+2025-09-20 01:28:50,695 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:50,797 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:50,797 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:50,797 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:50,798 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.38:443
+2025-09-20 01:28:50,798 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:28:50,798 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:28:50,799 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: Discord.exe (PID: 13088) - sudden_file_access_increase
+2025-09-20 01:28:50,922 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: RuntimeBroker.exe (PID: 13100) - sudden_file_access_increase
+2025-09-20 01:28:51,139 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: GitHubDesktop.exe (PID: 13188) - sudden_file_access_increase
+2025-09-20 01:28:51,494 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: Discord.exe (PID: 13428) - sudden_file_access_increase
+2025-09-20 01:28:52,072 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:28:52,073 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:52,073 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:28:52,073 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:28:52,073 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:28:52,169 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:52,174 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.52:443
+2025-09-20 01:28:52,301 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:28:52,301 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:28:52,301 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.137.234:443
+2025-09-20 01:28:52,301 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:52,301 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:28:52,302 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:28:52,302 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.23.210:443
+2025-09-20 01:28:52,303 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: OneDrive.Sync.Service.exe (PID: 13980) - sudden_file_access_increase
+2025-09-20 01:28:52,303 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:28:52,404 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.188.247.146:443
+2025-09-20 01:28:52,404 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:28:52,405 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:52,532 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:52,533 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:52,533 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.38:443
+2025-09-20 01:28:52,533 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.172.73:443
+2025-09-20 01:28:52,533 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:28:52,534 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:28:52,536 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 14684) - sudden_file_access_increase
+2025-09-20 01:28:52,685 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 14700) - sudden_file_access_increase
+2025-09-20 01:28:52,690 - antivirus.core.engine - WARNING - [LOCK] Proceso 14700 terminado (cuarentena)
+2025-09-20 01:28:52,847 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 14788) - sudden_file_access_increase
+2025-09-20 01:28:52,850 - antivirus.core.engine - WARNING - [LOCK] Proceso 14788 terminado (cuarentena)
+2025-09-20 01:28:52,996 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: Code.exe (PID: 14836) - sudden_file_access_increase
+2025-09-20 01:28:53,008 - antivirus.core.engine - WARNING - [LOCK] Proceso 14836 terminado (cuarentena)
+2025-09-20 01:28:53,829 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:28:53,833 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 15428) - sudden_file_access_increase
+2025-09-20 01:28:53,833 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:28:53,834 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:28:53,840 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:28:53,842 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:53,842 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:28:53,845 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:28:53,845 - antivirus.core.engine - WARNING - [LOCK] Proceso 15428 terminado (cuarentena)
+2025-09-20 01:28:53,845 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.137.234:443
+2025-09-20 01:28:53,846 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:53,847 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:28:53,848 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:28:54,049 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.23.210:443
+2025-09-20 01:28:54,049 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:28:54,049 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.188.247.146:443
+2025-09-20 01:28:54,049 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:28:54,050 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:54,050 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:54,050 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:54,050 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.38:443
+2025-09-20 01:28:54,051 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.172.73:443
+2025-09-20 01:28:54,051 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:28:54,051 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:28:54,053 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 15436) - sudden_file_access_increase
+2025-09-20 01:28:54,057 - antivirus.core.engine - WARNING - [LOCK] Proceso 15436 terminado (cuarentena)
+2025-09-20 01:28:54,276 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 15592) - sudden_file_access_increase
+2025-09-20 01:28:54,432 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 15860) - sudden_file_access_increase
+2025-09-20 01:28:54,653 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: nvcontainer.exe (PID: 16020) - sudden_file_access_increase
+2025-09-20 01:28:54,774 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 16452) - sudden_file_access_increase
+2025-09-20 01:28:54,956 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 16776) - sudden_file_access_increase
+2025-09-20 01:28:55,316 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:28:55,316 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:28:55,317 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:28:55,318 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: msedgewebview2.exe (PID: 16864) - sudden_file_access_increase
+2025-09-20 01:28:55,318 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:28:55,563 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:28:55,564 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:28:55,564 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.137.234:443
+2025-09-20 01:28:55,564 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:28:55,564 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:28:55,565 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.23.210:443
+2025-09-20 01:28:55,565 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:28:55,565 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.188.247.146:443
+2025-09-20 01:28:55,565 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:28:55,565 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:55,566 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.179.73.38:443
+2025-09-20 01:28:55,566 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:28:55,566 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:28:55,581 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 16944) - sudden_file_access_increase
+2025-09-20 01:28:55,956 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 17204) - sudden_file_access_increase
+2025-09-20 01:28:55,959 - antivirus.core.engine - WARNING - [LOCK] Proceso 17204 terminado (cuarentena)
+2025-09-20 01:28:56,093 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 17428) - sudden_file_access_increase
+2025-09-20 01:28:56,097 - antivirus.core.engine - WARNING - [LOCK] Proceso 17428 terminado (cuarentena)
+2025-09-20 01:28:56,379 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 17540) - sudden_file_access_increase
+2025-09-20 01:28:56,382 - antivirus.core.engine - WARNING - [LOCK] Proceso 17540 terminado (cuarentena)
+2025-09-20 01:28:56,511 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: msedge.exe (PID: 17760) - sudden_file_access_increase
+2025-09-20 01:28:56,873 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:28:56,873 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 185.199.110.133:443
+2025-09-20 01:28:56,873 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:28:56,873 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:28:56,873 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:28:56,874 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:28:56,874 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:28:56,874 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.137.234:443
+2025-09-20 01:28:56,874 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:56,875 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:56,875 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:28:56,875 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:28:56,875 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.23.210:443
+2025-09-20 01:28:56,876 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:28:56,876 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.188.247.146:443
+2025-09-20 01:28:56,876 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:28:56,876 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:56,877 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:28:56,877 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:28:56,879 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: msedge.exe (PID: 17812) - sudden_file_access_increase
+2025-09-20 01:28:57,320 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 19296) - sudden_file_access_increase
+2025-09-20 01:28:57,324 - antivirus.core.engine - WARNING - [LOCK] Proceso 19296 terminado (cuarentena)
+2025-09-20 01:28:57,460 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 19472) - sudden_file_access_increase
+2025-09-20 01:28:57,739 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: DSATray.exe (PID: 19524) - sudden_file_access_increase
+2025-09-20 01:28:58,414 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:28:58,414 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 185.199.110.133:443
+2025-09-20 01:28:58,414 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:28:58,414 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:28:58,414 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:28:58,415 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:28:58,415 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:28:58,415 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.137.234:443
+2025-09-20 01:28:58,415 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:58,415 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:58,415 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:28:58,415 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:28:58,416 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.23.210:443
+2025-09-20 01:28:58,416 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:28:58,416 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.188.247.146:443
+2025-09-20 01:28:58,416 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:28:58,416 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:58,416 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:28:58,416 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:28:58,418 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: Discord.exe (PID: 20372) - sudden_file_access_increase
+2025-09-20 01:28:58,421 - antivirus.core.engine - WARNING - [LOCK] Proceso 20372 terminado (cuarentena)
+2025-09-20 01:28:58,768 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 20848) - sudden_file_access_increase
+2025-09-20 01:28:58,771 - antivirus.core.engine - WARNING - [LOCK] Proceso 20848 terminado (cuarentena)
+2025-09-20 01:28:58,877 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: msedgewebview2.exe (PID: 20868) - sudden_file_access_increase
+2025-09-20 01:28:58,880 - antivirus.core.engine - WARNING - [LOCK] Proceso 20868 terminado (cuarentena)
+2025-09-20 01:28:59,147 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 21040) - sudden_file_access_increase
+2025-09-20 01:28:59,150 - antivirus.core.engine - WARNING - [LOCK] Proceso 21040 terminado (cuarentena)
+2025-09-20 01:28:59,653 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:28:59,653 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 150.171.73.16:443
+2025-09-20 01:28:59,653 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 185.199.110.133:443
+2025-09-20 01:28:59,654 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:28:59,654 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:28:59,654 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:28:59,654 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:28:59,654 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:28:59,654 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.5:443
+2025-09-20 01:28:59,655 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:59,655 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:28:59,655 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:28:59,655 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:28:59,656 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 21124) - sudden_file_access_increase
+2025-09-20 01:28:59,656 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.23.210:443
+2025-09-20 01:28:59,804 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:28:59,804 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:28:59,805 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:28:59,805 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:28:59,805 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:28:59,806 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: msedgewebview2.exe (PID: 21428) - sudden_file_access_increase
+2025-09-20 01:29:00,075 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: Code.exe (PID: 21924) - sudden_network_increase
+2025-09-20 01:29:01,765 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:01,765 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 150.171.73.16:443
+2025-09-20 01:29:01,765 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 185.199.110.133:443
+2025-09-20 01:29:01,765 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:29:01,766 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:01,766 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:29:01,766 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:01,766 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:29:01,767 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:29:01,767 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:29:01,767 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.5:443
+2025-09-20 01:29:01,767 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:01,767 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:01,768 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:29:01,768 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:29:01,769 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 24832) - sudden_file_access_increase
+2025-09-20 01:29:01,769 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.23.210:443
+2025-09-20 01:29:02,014 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:02,015 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:29:02,015 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:29:02,015 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:02,015 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:02,015 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:29:02,016 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:29:02,017 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 24932) - sudden_file_access_increase
+2025-09-20 01:29:02,545 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: pwsh.exe (PID: 25924) - sudden_file_access_increase
+2025-09-20 01:29:02,895 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: SearchHost.exe (PID: 26240) - sudden_network_increase
+2025-09-20 01:29:02,898 - antivirus.core.engine - WARNING - [LOCK] Proceso 26240 terminado (cuarentena)
+2025-09-20 01:29:03,278 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:03,278 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 150.171.73.16:443
+2025-09-20 01:29:03,278 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 185.199.110.133:443
+2025-09-20 01:29:03,278 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:29:03,278 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:03,279 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:29:03,279 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:03,279 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:29:03,280 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 26368) - sudden_file_access_increase
+2025-09-20 01:29:03,280 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:29:03,280 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:29:03,282 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:03,282 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.172.32:443
+2025-09-20 01:29:03,283 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:03,283 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.5:443
+2025-09-20 01:29:03,283 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:03,283 - antivirus.core.engine - WARNING - [LOCK] Proceso 26368 terminado (cuarentena)
+2025-09-20 01:29:03,283 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:03,284 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:29:03,284 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:29:03,284 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:03,433 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:29:03,434 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:29:03,434 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:03,434 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:29:03,434 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:29:03,438 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 26604) - sudden_file_access_increase
+2025-09-20 01:29:03,441 - antivirus.core.engine - WARNING - [LOCK] Proceso 26604 terminado (cuarentena)
+2025-09-20 01:29:04,129 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 27256) - sudden_network_increase
+2025-09-20 01:29:04,131 - antivirus.core.engine - WARNING - [LOCK] Proceso 27256 terminado (cuarentena)
+2025-09-20 01:29:04,691 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:04,692 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 150.171.73.16:443
+2025-09-20 01:29:04,692 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 185.199.110.133:443
+2025-09-20 01:29:04,692 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:29:04,692 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:04,692 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:29:04,693 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:04,693 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:29:04,693 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:29:04,693 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:29:04,693 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:04,693 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.172.32:443
+2025-09-20 01:29:04,693 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:04,693 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.5:443
+2025-09-20 01:29:04,694 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:04,694 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:04,694 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:29:04,694 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:29:04,694 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:04,694 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:29:04,695 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:29:04,696 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:04,696 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:29:04,696 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:29:06,607 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.173.17:443
+2025-09-20 01:29:06,607 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:06,607 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 150.171.73.16:443
+2025-09-20 01:29:06,608 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 185.199.110.133:443
+2025-09-20 01:29:06,608 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:29:06,608 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:06,608 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.114.5:443
+2025-09-20 01:29:06,608 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.173.17:443
+2025-09-20 01:29:06,609 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:29:06,609 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:06,609 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:29:06,609 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:29:06,609 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:29:06,610 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.173.17:443
+2025-09-20 01:29:06,610 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:06,610 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:06,610 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.114.5:443
+2025-09-20 01:29:06,610 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.5:443
+2025-09-20 01:29:06,611 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:06,611 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:06,611 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:29:06,611 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:06,611 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:06,611 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:29:06,612 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:06,612 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:29:06,612 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:29:06,612 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.6:443
+2025-09-20 01:29:06,614 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: Code.exe (PID: 400) - nuevo_proceso_sospechoso
+2025-09-20 01:29:06,614 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:06,615 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.173.17:443
+2025-09-20 01:29:06,617 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 200.60.190.38:443
+2025-09-20 01:29:06,617 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.173.17:443
+2025-09-20 01:29:06,617 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:06,617 - antivirus.core.engine - WARNING - [LOCK] Proceso 400 terminado (cuarentena)
+2025-09-20 01:29:06,617 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:29:06,618 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.173.17:443
+2025-09-20 01:29:06,618 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:29:07,631 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: Discord.exe (PID: 2204) - nuevo_proceso_sospechoso
+2025-09-20 01:29:07,635 - antivirus.core.engine - WARNING - [LOCK] Proceso 2204 terminado (cuarentena)
+2025-09-20 01:29:07,990 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:08,028 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 150.171.73.16:443
+2025-09-20 01:29:08,127 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 185.199.110.133:443
+2025-09-20 01:29:08,138 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:29:08,166 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.106.98:443
+2025-09-20 01:29:08,262 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:29:08,262 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:29:08,263 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:29:08,297 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:08,326 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.5:443
+2025-09-20 01:29:08,454 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:08,454 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:08,455 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:29:08,455 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:29:08,455 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.138.232:443
+2025-09-20 01:29:08,455 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:29:08,455 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:29:08,455 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.6:443
+2025-09-20 01:29:08,456 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:08,456 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 200.60.190.38:443
+2025-09-20 01:29:08,456 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:29:08,456 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:29:08,714 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: msedgewebview2.exe (PID: 5208) - nuevo_proceso_sospechoso
+2025-09-20 01:29:08,717 - antivirus.core.engine - WARNING - [LOCK] Proceso 5208 terminado (cuarentena)
+2025-09-20 01:29:09,181 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AntiKeylogger\antivirus\monitors\file_monitor.py - archivo_existente_sospechoso
+2025-09-20 01:29:09,558 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AntiKeylogger\antivirus\monitors\network_monitor.py - archivo_existente_sospechoso
+2025-09-20 01:29:09,903 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AntiKeylogger\antivirus\monitors\process_monitor.py - archivo_existente_sospechoso
+2025-09-20 01:29:09,928 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:29:10,048 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:10,048 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 150.171.73.16:443
+2025-09-20 01:29:10,049 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 185.199.110.133:443
+2025-09-20 01:29:10,049 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:29:10,049 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.106.98:443
+2025-09-20 01:29:10,049 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:29:10,049 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:29:10,050 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:29:10,050 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:10,050 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.5:443
+2025-09-20 01:29:10,050 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:10,050 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:10,050 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:29:10,051 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:29:10,051 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.138.232:443
+2025-09-20 01:29:10,051 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:29:10,060 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:29:10,090 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.6:443
+2025-09-20 01:29:10,122 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:10,137 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 200.60.190.38:443
+2025-09-20 01:29:10,167 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:29:10,221 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:29:10,840 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 8876) - nuevo_proceso_sospechoso
+2025-09-20 01:29:10,841 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AntiKeylogger\models\keylogger_model_large_20250918_112840.onnx - archivo_existente_sospechoso
+2025-09-20 01:29:10,843 - antivirus.core.engine - WARNING - [LOCK] Proceso 8876 terminado (cuarentena)
+2025-09-20 01:29:10,843 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AntiKeylogger\models\modelo_keylogger_from_datos.onnx - archivo_existente_sospechoso
+2025-09-20 01:29:11,181 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 9328) - nuevo_proceso_sospechoso
+2025-09-20 01:29:11,184 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AppData\Local\IconCache.db - archivo_existente_sospechoso
+2025-09-20 01:29:11,185 - antivirus.core.engine - WARNING - [LOCK] Proceso 9328 terminado (cuarentena)
+2025-09-20 01:29:11,625 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:29:11,625 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:11,625 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 150.171.73.16:443
+2025-09-20 01:29:11,625 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 185.199.110.133:443
+2025-09-20 01:29:11,626 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:29:11,626 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:11,626 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:11,626 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.106.98:443
+2025-09-20 01:29:11,626 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:29:11,627 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:29:11,627 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:29:11,627 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:11,627 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.5:443
+2025-09-20 01:29:11,627 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:11,627 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:11,628 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:29:11,628 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:29:11,628 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.138.232:443
+2025-09-20 01:29:11,628 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:29:11,629 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:29:11,629 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.6:443
+2025-09-20 01:29:11,629 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:11,629 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 200.60.190.38:443
+2025-09-20 01:29:11,629 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:11,630 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:29:11,630 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:29:11,630 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:13,007 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AppData\Local\Bluestacks\BlueStacksMicroInstaller_5.21.580.1019.log - archivo_existente_sospechoso
+2025-09-20 01:29:13,104 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:29:13,104 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:13,104 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 150.171.73.16:443
+2025-09-20 01:29:13,105 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AppData\Local\Bluestacks\Logs.log - archivo_existente_sospechoso
+2025-09-20 01:29:13,105 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.188.247.146:443
+2025-09-20 01:29:13,105 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.172.32:443
+2025-09-20 01:29:13,105 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 185.199.110.133:443
+2025-09-20 01:29:13,105 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:29:13,106 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:13,106 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:13,106 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.106.98:443
+2025-09-20 01:29:13,106 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:29:13,106 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:29:13,290 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:29:13,290 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:13,291 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:13,291 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.5:443
+2025-09-20 01:29:13,303 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:13,386 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:13,386 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:29:13,399 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:29:13,432 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.138.232:443
+2025-09-20 01:29:13,578 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:29:13,578 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:29:13,586 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.6:443
+2025-09-20 01:29:13,973 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:13,973 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 200.60.190.38:443
+2025-09-20 01:29:13,973 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:13,974 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:29:13,974 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:29:13,974 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:15,812 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.130.234:443
+2025-09-20 01:29:15,812 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.173.7:443
+2025-09-20 01:29:15,908 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.114.5:443
+2025-09-20 01:29:15,908 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:15,908 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:15,908 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 150.171.73.16:443
+2025-09-20 01:29:16,031 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.188.247.146:443
+2025-09-20 01:29:16,031 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 185.199.110.133:443
+2025-09-20 01:29:16,031 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.87:443
+2025-09-20 01:29:16,031 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:16,032 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.173.7:443
+2025-09-20 01:29:16,123 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.173.7:443
+2025-09-20 01:29:16,123 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:16,143 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.97.106.98:443
+2025-09-20 01:29:16,231 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:16451
+2025-09-20 01:29:16,251 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.189.173.7:443
+2025-09-20 01:29:16,266 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 148.113.190.78:17301
+2025-09-20 01:29:16,465 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 20.42.73.27:443
+2025-09-20 01:29:16,465 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:16,465 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:16,465 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:16,466 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.5:443
+2025-09-20 01:29:16,466 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:16,466 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:16,466 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 26.174.98.138:56955
+2025-09-20 01:29:16,466 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.113.21:443
+2025-09-20 01:29:16,466 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 162.159.138.232:443
+2025-09-20 01:29:16,467 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 186.233.185.60:443
+2025-09-20 01:29:16,467 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 52.111.239.64:443
+2025-09-20 01:29:16,467 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.6:443
+2025-09-20 01:29:16,467 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 140.82.112.22:443
+2025-09-20 01:29:16,467 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.246.33:443
+2025-09-20 01:29:16,467 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 200.60.190.38:443
+2025-09-20 01:29:16,468 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:16,468 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: fe80::3603:abdd:ad07:b8b6:8391
+2025-09-20 01:29:16,468 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 104.208.203.90:443
+2025-09-20 01:29:16,468 - antivirus.monitors.network_monitor - WARNING - [ALERT] Conexión sospechosa detectada: 13.107.5.93:443
+2025-09-20 01:29:18,601 - antivirus.monitors.network_monitor - INFO - [STOP] Monitor de red detenido
+2025-09-20 01:29:18,627 - antivirus.core.engine - INFO - [STOP] Monitor network detenido
+2025-09-20 01:29:19,393 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AppData\Local\Docker\install-log.txt - archivo_existente_sospechoso
+2025-09-20 01:29:19,627 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AppData\Local\Docker\volume-backup-schedule.json - archivo_existente_sospechoso
+2025-09-20 01:29:20,512 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AppData\Local\GitHubDesktop\Squirrel-ProcessStart.log - archivo_existente_sospechoso
+2025-09-20 01:29:20,861 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AppData\Local\GitHubDesktop\Squirrel-Shortcut.log - archivo_existente_sospechoso
+2025-09-20 01:29:20,863 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AppData\Local\Injustice2\WebRequests.cache - archivo_existente_sospechoso
+2025-09-20 01:29:20,864 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AppData\Local\Injustice2\WebRequestsB.cache - archivo_existente_sospechoso
+2025-09-20 01:29:21,849 - antivirus.monitors.process_monitor - WARNING - [ALERT] Proceso sospechoso detectado: opera.exe (PID: 19132) - nuevo_proceso_sospechoso
+2025-09-20 01:29:21,852 - antivirus.core.engine - WARNING - [LOCK] Proceso 19132 terminado (cuarentena)
+2025-09-20 01:29:23,073 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AppData\Local\MongoDBCompass\Squirrel-CheckForUpdate.log - archivo_existente_sospechoso
+2025-09-20 01:29:23,190 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AppData\Local\MongoDBCompass\Squirrel-Shortcut.log - archivo_existente_sospechoso
+2025-09-20 01:29:23,281 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AppData\Local\MongoDBCompass\Squirrel-Update.log - archivo_existente_sospechoso
+2025-09-20 01:29:23,648 - antivirus.monitors.file_monitor - WARNING - [ALERT] Archivo sospechoso detectado: C:\Users\windows10\AppData\Local\MSfree Inc\kmsauto.ini - archivo_existente_sospechoso
+2025-09-20 01:29:23,668 - antivirus.monitors.process_monitor - INFO - [STOP] Monitor de procesos detenido
+2025-09-20 01:29:23,678 - antivirus.core.engine - INFO - [STOP] Monitor process detenido
+2025-09-20 01:29:23,781 - antivirus.monitors.file_monitor - INFO - [STOP] Monitor de archivos detenido
+2025-09-20 01:29:23,781 - antivirus.core.engine - INFO - [STOP] Monitor filesystem detenido
+2025-09-20 01:29:23,886 - antivirus.core.engine - INFO - [SHIELD] Protección detenida

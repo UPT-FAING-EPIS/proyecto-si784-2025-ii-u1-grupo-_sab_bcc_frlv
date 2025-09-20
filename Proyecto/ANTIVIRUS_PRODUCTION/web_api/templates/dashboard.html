@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Keylogger - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .dashboard-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .notification-toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+            min-width: 350px;
+        }
+        .threat-level-high { color: #dc3545; }
+        .threat-level-medium { color: #fd7e14; }
+        .threat-level-low { color: #198754; }
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .status-active { background-color: #28a745; }
+        .status-warning { background-color: #ffc107; }
+        .status-danger { background-color: #dc3545; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-shield-alt me-2"></i>Anti-Keylogger Protection
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/"><i class="fas fa-home me-1"></i>Inicio</a>
+                <a class="nav-link active" href="/dashboard"><i class="fas fa-chart-bar me-1"></i>Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Estado del Sistema -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card dashboard-card">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">
+                            <span class="status-indicator status-active"></span>
+                            Sistema de Protección Activo
+                        </h2>
+                        <p class="text-muted">Última actualización: <span id="last-update">Cargando...</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estadísticas Generales -->
+        <div class="row mb-4">
+            <div class="col-md-3 mb-3">
+                <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <i class="fas fa-search text-primary fa-2x mb-2"></i>
+                        <h5 class="card-title">Procesos Escaneados</h5>
+                        <div class="stat-number" id="processes-scanned">--</div>
+                        <small class="text-muted">Última ejecución</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <i class="fas fa-exclamation-triangle text-warning fa-2x mb-2"></i>
+                        <h5 class="card-title">Amenazas Detectadas</h5>
+                        <div class="stat-number text-warning" id="threats-detected">--</div>
+                        <small class="text-muted">Total encontradas</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <i class="fas fa-clock text-info fa-2x mb-2"></i>
+                        <h5 class="card-title">Último Escaneo</h5>
+                        <div class="h5 text-info" id="last-scan">--</div>
+                        <small class="text-muted">Tiempo transcurrido</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card dashboard-card h-100 text-center p-3">
+                    <div class="card-body">
+                        <i class="fas fa-tachometer-alt text-success fa-2x mb-2"></i>
+                        <h5 class="card-title">Rendimiento</h5>
+                        <div class="h5 text-success" id="scan-duration">--</div>
+                        <small class="text-muted">Tiempo de escaneo</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detecciones Recientes -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card dashboard-card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-list me-2"></i>Detecciones Recientes
+                        </h5>
+                        <button class="btn btn-sm btn-outline-primary" onclick="refreshDetections()">
+                            <i class="fas fa-sync-alt me-1"></i>Actualizar
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th><i class="fas fa-file-alt me-1"></i>Programa</th>
+                                        <th><i class="fas fa-clock me-1"></i>Hora</th>
+                                        <th><i class="fas fa-shield-alt me-1"></i>Nivel</th>
+                                        <th><i class="fas fa-cog me-1"></i>Acción</th>
+                                        <th><i class="fas fa-percent me-1"></i>Confianza</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="detections-table">
+                                    <tr>
+                                        <td colspan="5" class="text-center text-muted">
+                                            <i class="fas fa-spinner fa-spin me-2"></i>Cargando detecciones...
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notificaciones -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card dashboard-card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-bell me-2"></i>Notificaciones
+                            <span class="badge bg-primary ms-2" id="unread-count">0</span>
+                        </h5>
+                        <button class="btn btn-sm btn-outline-success" onclick="markAllRead()">
+                            <i class="fas fa-check-double me-1"></i>Marcar todas como leídas
+                        </button>
+                    </div>
+                    <div class="card-body" id="notifications-container">
+                        <div class="text-center text-muted">
+                            <i class="fas fa-spinner fa-spin me-2"></i>Cargando notificaciones...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" id="toast-container">
+        <!-- Los toasts aparecerán aquí -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let lastNotificationCheck = new Date();
+
+        // Función para cargar estadísticas
+        async function loadStats() {
+            try {
+                const response = await fetch('/api/stats/summary');
+                const data = await response.json();
+                
+                document.getElementById('processes-scanned').textContent = data.total_processes_scanned;
+                document.getElementById('threats-detected').textContent = data.threats_detected;
+                document.getElementById('last-scan').textContent = formatTime(data.last_scan);
+                document.getElementById('scan-duration').textContent = data.scan_duration;
+                document.getElementById('last-update').textContent = formatTime(data.last_update);
+                
+            } catch (error) {
+                console.error('Error loading stats:', error);
+                showToast('Error', 'No se pudieron cargar las estadísticas', 'error');
+            }
+        }
+
+        // Función para cargar detecciones
+        async function loadDetections() {
+            try {
+                const response = await fetch('/api/detections/recent');
+                const detections = await response.json();
+                
+                const tbody = document.getElementById('detections-table');
+                tbody.innerHTML = '';
+                
+                if (detections.length === 0) {
+                    tbody.innerHTML = `
+                        <tr>
+                            <td colspan="5" class="text-center text-muted">
+                                <i class="fas fa-check-circle me-2 text-success"></i>No hay detecciones recientes
+                            </td>
+                        </tr>
+                    `;
+                    return;
+                }
+                
+                detections.forEach(detection => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>
+                            <i class="fas fa-file-alt me-2"></i>
+                            <strong>${detection.program_name}</strong>
+                            <br><small class="text-muted">${detection.file_path}</small>
+                        </td>
+                        <td>${formatTime(detection.detection_time)}</td>
+                        <td>
+                            <span class="badge bg-${getThreatLevelColor(detection.threat_level)}">
+                                <i class="fas fa-${getThreatLevelIcon(detection.threat_level)} me-1"></i>
+                                ${detection.threat_level}
+                            </span>
+                        </td>
+                        <td>
+                            <span class="text-${getActionColor(detection.action_taken)}">
+                                ${detection.action_taken}
+                            </span>
+                        </td>
+                        <td>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar bg-${getConfidenceColor(detection.confidence)}" 
+                                     style="width: ${detection.confidence}%">
+                                    ${detection.confidence}%
+                                </div>
+                            </div>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error loading detections:', error);
+                document.getElementById('detections-table').innerHTML = `
+                    <tr>
+                        <td colspan="5" class="text-center text-danger">
+                            <i class="fas fa-exclamation-triangle me-2"></i>Error cargando detecciones
+                        </td>
+                    </tr>
+                `;
+            }
+        }
+
+        // Función para cargar notificaciones
+        async function loadNotifications() {
+            try {
+                const response = await fetch('/api/notifications');
+                const notifications = await response.json();
+                
+                const container = document.getElementById('notifications-container');
+                container.innerHTML = '';
+                
+                const unreadCount = notifications.filter(n => !n.read).length;
+                document.getElementById('unread-count').textContent = unreadCount;
+                
+                if (notifications.length === 0) {
+                    container.innerHTML = `
+                        <div class="text-center text-muted">
+                            <i class="fas fa-check-circle me-2 text-success"></i>No hay notificaciones
+                        </div>
+                    `;
+                    return;
+                }
+                
+                notifications.forEach(notification => {
+                    const notificationEl = document.createElement('div');
+                    notificationEl.className = `alert alert-${getNotificationType(notification.type)} ${notification.read ? 'opacity-50' : ''} alert-dismissible fade show`;
+                    notificationEl.innerHTML = `
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-${getNotificationIcon(notification.type)} me-2 mt-1"></i>
+                            <div class="flex-grow-1">
+                                <strong>${notification.title}</strong><br>
+                                ${notification.message}
+                                ${notification.program ? `<br><small><strong>Programa:</strong> ${notification.program}</small>` : ''}
+                                <br><small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>${formatTime(notification.timestamp)}
+                                </small>
+                            </div>
+                            ${!notification.read ? `
+                                <button type="button" class="btn btn-sm btn-outline-secondary me-2" 
+                                        onclick="markAsRead(${notification.id})">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            ` : ''}
+                        </div>
+                    `;
+                    container.appendChild(notificationEl);
+                });
+
+                // Mostrar toast para nuevas notificaciones
+                const newNotifications = notifications.filter(n => 
+                    !n.read && new Date(n.timestamp) > lastNotificationCheck
+                );
+                
+                newNotifications.forEach(notification => {
+                    showToast(notification.title, notification.message, notification.type);
+                });
+                
+                lastNotificationCheck = new Date();
+                
+            } catch (error) {
+                console.error('Error loading notifications:', error);
+                document.getElementById('notifications-container').innerHTML = `
+                    <div class="text-center text-danger">
+                        <i class="fas fa-exclamation-triangle me-2"></i>Error cargando notificaciones
+                    </div>
+                `;
+            }
+        }
+
+        // Función para mostrar toast
+        function showToast(title, message, type = 'info') {
+            const toastContainer = document.getElementById('toast-container');
+            const toastEl = document.createElement('div');
+            toastEl.className = 'toast show';
+            toastEl.innerHTML = `
+                <div class="toast-header">
+                    <i class="fas fa-${getNotificationIcon(type)} me-2 text-${getNotificationType(type)}"></i>
+                    <strong class="me-auto">${title}</strong>
+                    <small>${new Date().toLocaleTimeString()}</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                </div>
+                <div class="toast-body">
+                    ${message}
+                </div>
+            `;
+            toastContainer.appendChild(toastEl);
+
+            // Auto-hide after 5 seconds
+            setTimeout(() => {
+                toastEl.classList.remove('show');
+                setTimeout(() => toastEl.remove(), 300);
+            }, 5000);
+        }
+
+        // Función para marcar notificación como leída
+        async function markAsRead(notificationId) {
+            try {
+                await fetch(`/api/notifications/${notificationId}/mark-read`, {
+                    method: 'POST'
+                });
+                loadNotifications(); // Recargar notificaciones
+                showToast('Éxito', 'Notificación marcada como leída', 'success');
+            } catch (error) {
+                console.error('Error marking notification as read:', error);
+                showToast('Error', 'No se pudo marcar la notificación', 'error');
+            }
+        }
+
+        // Función para marcar todas como leídas
+        async function markAllRead() {
+            try {
+                await fetch('/api/notifications/mark-all-read', {
+                    method: 'POST'
+                });
+                loadNotifications(); // Recargar notificaciones
+                showToast('Éxito', 'Todas las notificaciones marcadas como leídas', 'success');
+            } catch (error) {
+                console.error('Error marking all notifications as read:', error);
+                showToast('Error', 'No se pudieron marcar las notificaciones', 'error');
+            }
+        }
+
+        // Función para refrescar detecciones
+        function refreshDetections() {
+            loadDetections();
+            showToast('Actualizado', 'Detecciones actualizadas', 'info');
+        }
+
+        // Funciones auxiliares
+        function getThreatLevelColor(level) {
+            switch(level.toLowerCase()) {
+                case 'high': return 'danger';
+                case 'medium': return 'warning';
+                case 'low': return 'success';
+                default: return 'secondary';
+            }
+        }
+
+        function getThreatLevelIcon(level) {
+            switch(level.toLowerCase()) {
+                case 'high': return 'exclamation-triangle';
+                case 'medium': return 'exclamation-circle';
+                case 'low': return 'info-circle';
+                default: return 'question-circle';
+            }
+        }
+
+        function getActionColor(action) {
+            if (action.includes('Quarantined')) return 'danger';
+            if (action.includes('Monitored')) return 'warning';
+            if (action.includes('Allowed')) return 'success';
+            return 'secondary';
+        }
+
+        function getConfidenceColor(confidence) {
+            if (confidence >= 80) return 'danger';
+            if (confidence >= 50) return 'warning';
+            return 'success';
+        }
+
+        function getNotificationType(type) {
+            switch(type) {
+                case 'warning': return 'warning';
+                case 'error': return 'danger';
+                case 'success': return 'success';
+                default: return 'info';
+            }
+        }
+
+        function getNotificationIcon(type) {
+            switch(type) {
+                case 'warning': return 'exclamation-triangle';
+                case 'error': return 'times-circle';
+                case 'success': return 'check-circle';
+                default: return 'info-circle';
+            }
+        }
+
+        function formatTime(timeString) {
+            const time = new Date(timeString);
+            const now = new Date();
+            const diff = now - time;
+            
+            if (diff < 60000) return 'Hace un momento';
+            if (diff < 3600000) return `Hace ${Math.floor(diff / 60000)} minutos`;
+            if (diff < 86400000) return `Hace ${Math.floor(diff / 3600000)} horas`;
+            
+            return time.toLocaleString();
+        }
+
+        // Cargar datos al inicio
+        document.addEventListener('DOMContentLoaded', function() {
+            loadStats();
+            loadDetections();
+            loadNotifications();
+
+            // Actualizar cada 30 segundos
+            setInterval(() => {
+                loadStats();
+                loadDetections();
+                loadNotifications();
+            }, 30000);
+        });
+    </script>
+</body>
+</html>

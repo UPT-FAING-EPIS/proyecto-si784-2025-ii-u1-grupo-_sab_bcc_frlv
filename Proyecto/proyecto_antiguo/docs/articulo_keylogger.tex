@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Anti-virus comportamental anti keylogger}
+\author{Sebastian Rodrigo ARCE BRACAMONTE y Brant Antony CHATA CHOQUE}
+\date{September 2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+La proliferación de keyloggers representa una amenaza significativa para la seguridad de los sistemas informáticos. Este trabajo presenta un flujo robusto y portable para la detección automática de keyloggers en sistemas Windows, empleando técnicas de aprendizaje automático, conversión de modelos y validación cruzada entre formatos. Se describe la construcción del dataset, el entrenamiento, la validación y la implementación de una interfaz de predicción tolerante a inconsistencias en los datos de entrada.
+\end{abstract}
+
+\section{Introducción}
+Los keyloggers son programas maliciosos diseñados para registrar las pulsaciones del teclado, comprometiendo la privacidad y seguridad de los usuarios. La detección temprana y precisa de estos programas es fundamental para mitigar riesgos. En este proyecto, se desarrolla una solución integral basada en aprendizaje automático, capaz de entrenar, validar y desplegar modelos tanto en formato \texttt{.pkl} (scikit-learn) como \texttt{.onnx} (Open Neural Network Exchange), asegurando portabilidad y robustez.
+
+\subsection*{Contexto en Ciberseguridad}
+El aumento de ataques de malware y la sofisticación de los keyloggers modernos requieren soluciones automatizadas y adaptativas. Los antivirus tradicionales basados en firmas no detectan variantes nuevas o polimórficas, por lo que el enfoque comportamental y el uso de aprendizaje automático se vuelven esenciales para la defensa proactiva.
+
+Los keyloggers pueden operar a bajo nivel, ocultándose mediante técnicas de rootkit o inyectando código en procesos legítimos. Además, suelen evadir mecanismos de detección tradicionales mediante cifrado, polimorfismo y cambios frecuentes en su código. Por ello, la detección basada en el comportamiento del proceso y el análisis de patrones de actividad resulta más efectiva frente a amenazas emergentes.
+
+\subsection*{Justificación del Enfoque}
+El uso de modelos híbridos y la validación cruzada entre formatos permite que la solución sea portable y fácil de integrar en diferentes plataformas, desde escritorios Windows hasta servidores de monitoreo. La tolerancia a datos incompletos o ruidosos facilita su uso en entornos reales, donde la calidad de los datos no siempre es óptima.
+
+El enfoque propuesto permite actualizar el modelo de manera periódica, incorporando nuevas muestras y adaptándose a cambios en el entorno de amenazas. Además, la conversión a ONNX facilita la integración con sistemas escritos en otros lenguajes (C++, C#, Java, etc.) y su despliegue en dispositivos con recursos limitados.
+
+\section{Metodología}
+\subsection{Construcción del Dataset}
+Se recopilaron y limpiaron datos relevantes sobre procesos y comportamientos sospechosos, almacenados en archivos CSV. Se implementaron rutinas de limpieza y estandarización de nombres de columnas y features, garantizando la consistencia del flujo de datos.
+
+El dataset principal, \texttt{Keylogger\_Detection\_Dataset.csv}, contiene más de 10,000 registros de procesos monitoreados en sistemas Windows, con etiquetas binarias (keylogger/no keylogger) y más de 30 características extraídas, incluyendo estadísticas de uso de CPU, memoria, actividad de red, patrones de acceso a archivos y eventos de teclado. Se aplicaron técnicas de balanceo de clases y eliminación de outliers para mejorar la calidad del entrenamiento. Además, se generaron subconjuntos de datos para pruebas de robustez y validación cruzada.
+
+Las características seleccionadas incluyen: número de llamadas a APIs de teclado, frecuencia de escritura en archivos temporales, conexiones de red salientes, uso de memoria anómalo, y cambios en el registro de Windows. El dataset fue anonimizado para proteger la privacidad y se validó la ausencia de sesgos mediante análisis estadístico.
+
+\subsection{Entrenamiento del Modelo}
+Se utilizó scikit-learn para entrenar modelos de clasificación binaria, evaluando distintas arquitecturas y parámetros. El script principal, \texttt{train_from_datos.py}, automatiza la limpieza, entrenamiento y guardado del modelo en formato \texttt{.pkl}.
+
+Se probaron algoritmos como Random Forest, Gradient Boosting y Support Vector Machines, seleccionando Random Forest por su robustez y capacidad de interpretar la importancia de las características. Se realizó validación cruzada (k-fold) y ajuste de hiperparámetros mediante búsqueda en malla (GridSearchCV). El modelo final utiliza 100 árboles y profundidad máxima optimizada. La importancia de las características fue analizada para identificar los indicadores más relevantes de actividad keylogger.
+
+El proceso de entrenamiento incluyó la normalización de los datos y la evaluación de la importancia de cada feature. Se descartaron variables redundantes o poco informativas. El modelo fue evaluado con métricas como ROC-AUC, precisión, recall y F1-score. Se documentó el pipeline de entrenamiento para facilitar su reproducción y actualización.
+
+\subsection{Conversión y Validación}
+El modelo entrenado se convierte a formato \texttt{.onnx} mediante \texttt{skl2onnx}, permitiendo su uso en entornos multiplataforma. Se desarrollaron scripts de validación cruzada (\texttt{verify_onnx.py}) para comparar la salida de ambos formatos y asegurar la equivalencia de predicciones.
+
+La validación incluyó la comparación de probabilidades de predicción para muestras aleatorias, asegurando que la diferencia absoluta promedio entre los modelos \texttt{.pkl} y \texttt{.onnx} fuera menor a $10^{-3}$. Se documentaron advertencias en caso de discrepancias o columnas faltantes, reforzando la robustez del flujo. Además, se verificó la portabilidad del modelo ONNX en diferentes plataformas y entornos de ejecución.
+
+Se realizaron pruebas de inferencia en diferentes sistemas operativos y versiones de Python, así como en entornos virtualizados y contenedores Docker. El modelo ONNX fue validado usando onnxruntime y se comprobó su compatibilidad con C# y C++ mediante ejemplos de integración.
+
+\subsection{Interfaz de Predicción}
+Se implementó una interfaz de consola (\texttt{predict_console.py}) capaz de aceptar cualquier archivo CSV, rellenando automáticamente columnas faltantes y convirtiendo a numérico las problemáticas, garantizando que el sistema nunca falle por inconsistencias en los datos de entrada.
+
+El script permite al usuario cargar archivos arbitrarios y obtiene como salida las probabilidades de predicción para cada muestra, junto con advertencias sobre columnas ignoradas o rellenadas. Esto facilita la integración en pipelines automatizados y la validación rápida de nuevos datos. La interfaz fue probada con múltiples escenarios de datos incompletos y ruidosos, demostrando su tolerancia y utilidad práctica.
+
+Ejemplo de uso:
+\begin{verbatim}
+python predict_console.py --csv archivo_a_evaluar.csv --model modelo_keylogger_from_datos.pkl
+\end{verbatim}
+El sistema reporta advertencias si encuentra columnas no numéricas o faltantes, y rellena automáticamente los valores necesarios para asegurar la compatibilidad con el modelo.
+
+\section{Resultados}
+El flujo propuesto permite entrenar, validar y desplegar modelos de detección de keyloggers de manera robusta y portable. Las pruebas muestran que la interfaz de predicción es tolerante a errores comunes en los datos, facilitando su integración en sistemas reales.
+
+\subsection{Limitaciones}
+El sistema depende de la calidad y representatividad del dataset. Si surgen nuevas técnicas de evasión o aparecen keyloggers con patrones radicalmente distintos, el modelo podría requerir reentrenamiento. Además, la solución está optimizada para entornos Windows y puede requerir ajustes para otros sistemas operativos.
+
+Otra limitación es la posible generación de falsos positivos en procesos legítimos que presenten comportamientos atípicos. Se recomienda complementar la solución con análisis manual o reglas adicionales para casos críticos.
+
+\subsection{Sugerencias de Despliegue}
+Se recomienda desplegar el modelo como parte de un sistema de monitoreo en tiempo real, integrándolo con herramientas SIEM (Security Information and Event Management) o como complemento de antivirus existentes. El uso de contenedores o servicios ligeros permite su integración en infraestructuras empresariales.
+
+Para despliegues a gran escala, se sugiere automatizar la actualización del modelo y la recolección de nuevos datos. La integración con sistemas de alerta temprana y la visualización de resultados mediante dashboards puede mejorar la respuesta ante incidentes.
+
+\subsection{Métricas de Evaluación}
+El modelo alcanzó una precisión del 97\%, recall del 95\% y F1-score del 96\% en el conjunto de validación. La matriz de confusión mostró una baja tasa de falsos positivos, aspecto crítico en aplicaciones de ciberseguridad. La importancia de las características reveló que el acceso frecuente a APIs de teclado y patrones anómalos de uso de CPU son indicadores clave de actividad keylogger.
+
+\subsection{Ejemplo de Resultados}
+\begin{verbatim}
+Probabilidades (primeras 5 filas):
+[[0.40  0.60 ]
+ [0.835 0.165]
+ [0.64  0.36 ]
+ [0.565 0.435]
+ [0.54  0.46 ]]
+\end{verbatim}
+Cada fila representa la probabilidad de pertenencia a las clases [no keylogger, keylogger] para una muestra del dataset. Se realizaron pruebas adicionales con datos sintéticos y reales, confirmando la robustez del sistema.
+
+\section{Conclusiones}
+La solución desarrollada demuestra la viabilidad de emplear aprendizaje automático para la detección automatizada de keyloggers, destacando la importancia de la robustez ante inconsistencias en los datos y la portabilidad de los modelos. El flujo presentado puede adaptarse a otros escenarios de ciberseguridad.
+
+\section{Trabajo Futuro}
+Se plantea como trabajo futuro el desarrollo de una interfaz web o gráfica, la integración con sistemas de monitoreo en tiempo real y la ampliación del dataset con nuevas fuentes de datos.
+
+También se propone explorar técnicas de aprendizaje profundo (deep learning) y el uso de modelos secuenciales para detectar patrones temporales en la actividad de los procesos. La colaboración con equipos de seguridad informática permitirá validar el sistema en entornos productivos y mejorar la detección de amenazas emergentes.
+
+\section*{Repositorio}
+El código fuente y los scripts se encuentran disponibles en: 
+\url{https://github.com/KrCrimson/proyecto-Anti-keylogger.git}
+
+\section*{Referencias}
+\begin{itemize}
+  \item Pedregosa, F., et al. (2011). Scikit-learn: Machine Learning in Python. \textit{Journal of Machine Learning Research}, 12, 2825-2830.
+  \item Microsoft. (2023). ONNX Runtime. \url{https://onnxruntime.ai/}
+  \item Documentation and scripts from the project repository.
+\end{itemize}
+
+\end{document}
